@@ -1,0 +1,121 @@
+// Prisma schema for the Finance Insights platform.
+// Learn more: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Exchange {
+  id        String    @id @default(cuid())
+  code      String    @unique
+  name      String
+  country   String
+  lat       Float
+  lng       Float
+  companies Company[]
+  createdAt DateTime  @default(now())
+}
+
+model Company {
+  id         String   @id @default(cuid())
+  ticker     String
+  name       String
+  sector     String?
+  cik        String? // SEC EDGAR CIK, null for non-EDGAR companies
+  lat        Float?
+  lng        Float?
+  logoUrl    String?
+  summary    String?
+  exchangeId String
+  exchange   Exchange @relation(fields: [exchangeId], references: [id])
+  reports    Report[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([exchangeId, ticker])
+  @@index([cik])
+}
+
+enum ReportSource {
+  EDGAR
+  UPLOAD
+}
+
+enum ReportStatus {
+  PENDING
+  PROCESSING
+  ANALYZED
+  FAILED
+}
+
+enum ReportPeriod {
+  ANNUAL
+  Q1
+  Q2
+  Q3
+  Q4
+}
+
+model Report {
+  id         String        @id @default(cuid())
+  companyId  String
+  company    Company       @relation(fields: [companyId], references: [id])
+  fiscalYear Int
+  period     ReportPeriod  @default(ANNUAL)
+  source     ReportSource
+  sourceUrl  String?
+  filePath   String?
+  rawText    String?
+  status     ReportStatus  @default(PENDING)
+  failReason String?
+  insight    Insight?
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  @@unique([companyId, fiscalYear, period])
+  @@index([status])
+}
+
+model Insight {
+  id               String   @id @default(cuid())
+  reportId         String   @unique
+  report           Report   @relation(fields: [reportId], references: [id])
+  revenue          Decimal? @db.Decimal(24, 2)
+  netIncome        Decimal? @db.Decimal(24, 2)
+  totalAssets      Decimal? @db.Decimal(24, 2)
+  totalLiabilities Decimal? @db.Decimal(24, 2)
+  eps              Decimal? @db.Decimal(12, 4)
+  revenueGrowthPct Decimal? @db.Decimal(7, 2)
+  profitMarginPct  Decimal? @db.Decimal(7, 2)
+  summary          String
+  highlights       Json?
+  model            String
+  generatedAt      DateTime @default(now())
+}
+
+model Subscriber {
+  id               String    @id @default(cuid())
+  email            String    @unique
+  confirmed        Boolean   @default(false)
+  confirmToken     String    @unique
+  unsubscribeToken String    @unique
+  subscribedAt     DateTime  @default(now())
+  confirmedAt      DateTime?
+  unsubscribedAt   DateTime?
+}
+
+model Newsletter {
+  id             String    @id @default(cuid())
+  subject        String
+  bodyHtml       String
+  bodyText       String
+  status         String    @default("DRAFT")
+  recipientCount Int?
+  generatedAt    DateTime  @default(now())
+  sentAt         DateTime?
+}
