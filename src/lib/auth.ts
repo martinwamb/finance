@@ -1,9 +1,18 @@
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
-import bcrypt from "bcryptjs";
 
 const COOKIE_NAME = "finance_admin_session";
-const SESSION_TTL_SECONDS = 60 * 60 * 24 * 7;
+const SESSION_TTL_SECONDS = 60 * 60 * 24 * 30;
+
+// Single-owner admin panel — same allowlist pattern as the other apps on this
+// server (see port's lib/auth.ts), just scoped to one address instead of a
+// whole @wambugumartin.com domain since only one person uploads reports here.
+const ADMIN_EMAILS = ["martinwamb@gmail.com"];
+
+export function isAdminEmail(email?: string | null) {
+  if (!email) return false;
+  return ADMIN_EMAILS.includes(email.toLowerCase());
+}
 
 function secretKey() {
   const secret = process.env.ADMIN_SESSION_SECRET;
@@ -11,14 +20,8 @@ function secretKey() {
   return new TextEncoder().encode(secret);
 }
 
-export async function verifyAdminPassword(password: string) {
-  const hash = process.env.ADMIN_PASSWORD_HASH;
-  if (!hash) throw new Error("ADMIN_PASSWORD_HASH is not set");
-  return bcrypt.compare(password, hash);
-}
-
-export async function createAdminSession() {
-  const token = await new SignJWT({ role: "admin" })
+export async function createAdminSession(email: string) {
+  const token = await new SignJWT({ email })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime(`${SESSION_TTL_SECONDS}s`)
@@ -44,8 +47,8 @@ export async function isAdminAuthed() {
   const token = store.get(COOKIE_NAME)?.value;
   if (!token) return false;
   try {
-    await jwtVerify(token, secretKey());
-    return true;
+    const { payload } = await jwtVerify(token, secretKey());
+    return isAdminEmail(payload.email as string | undefined);
   } catch {
     return false;
   }

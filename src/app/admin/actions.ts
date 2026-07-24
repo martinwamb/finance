@@ -4,30 +4,13 @@ import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import {
-  createAdminSession,
-  destroyAdminSession,
-  isAdminAuthed,
-  verifyAdminPassword,
-} from "@/lib/auth";
+import { destroyAdminSession, isAdminAuthed } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { extractPdfText } from "@/lib/pdf";
 
 export interface FormState {
   success: boolean;
   message: string;
-}
-
-export async function adminLoginAction(
-  _prev: FormState,
-  formData: FormData
-): Promise<FormState> {
-  const password = String(formData.get("password") ?? "");
-  const ok = await verifyAdminPassword(password);
-  if (!ok) return { success: false, message: "Incorrect password." };
-
-  await createAdminSession();
-  redirect("/admin");
 }
 
 export async function adminLogoutAction() {

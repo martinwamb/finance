@@ -1,16 +1,19 @@
-"use client";
-
-import { useActionState } from "react";
-import { adminLoginAction, type FormState } from "@/app/admin/actions";
-import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const initialState: FormState = { success: false, message: "" };
+const ERROR_MESSAGES: Record<string, string> = {
+  google_cancelled: "Sign-in was cancelled.",
+  not_admin: "That Google account isn't authorized for admin access.",
+  google_failed: "Something went wrong signing in with Google. Try again.",
+};
 
-export default function AdminLoginPage() {
-  const [state, formAction, pending] = useActionState(adminLoginAction, initialState);
+export default async function AdminLoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error } = await searchParams;
 
   return (
     <div className="flex flex-1 items-center justify-center px-6 py-24">
@@ -18,19 +21,15 @@ export default function AdminLoginPage() {
         <CardHeader>
           <CardTitle>Admin sign in</CardTitle>
         </CardHeader>
-        <CardContent>
-          <form action={formAction} className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2">
-              <Label htmlFor="password">Password</Label>
-              <Input id="password" name="password" type="password" required autoFocus />
-            </div>
-            {state.message && !state.success && (
-              <p className="text-sm text-destructive">{state.message}</p>
-            )}
-            <Button type="submit" disabled={pending}>
-              {pending ? "Signing in…" : "Sign in"}
-            </Button>
-          </form>
+        <CardContent className="flex flex-col gap-4">
+          {error && (
+            <p className="text-sm text-destructive">
+              {ERROR_MESSAGES[error] ?? "Sign-in failed."}
+            </p>
+          )}
+          <Link href="/api/auth/google">
+            <Button className="w-full">Sign in with Google</Button>
+          </Link>
         </CardContent>
       </Card>
     </div>
