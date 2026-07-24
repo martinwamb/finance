@@ -123,7 +123,9 @@ async function main() {
     const exchange = EXCHANGES.find((e) => e.code === code)!;
     for (const c of list) {
       console.log(`Resolving CIK for ${c.ticker}...`);
-      const cik = await resolveCikByTicker(c.ticker.replace("-", "."));
+      // SEC's mapping uses the hyphenated class-share form as-is (e.g. "BRK-B"),
+      // not dot notation — no reformatting needed.
+      const cik = await resolveCikByTicker(c.ticker);
       await db.company.upsert({
         where: { exchangeId_ticker: { exchangeId, ticker: c.ticker } },
         update: { name: c.name, sector: c.sector, cik },
