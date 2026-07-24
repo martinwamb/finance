@@ -1,0 +1,4520 @@
+[
+  {
+    "ticker": "MMM",
+    "exchange": "NYSE",
+    "name": "3M",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Conglomerates",
+    "hqCity": "Saint Paul",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "AOS",
+    "exchange": "NYSE",
+    "name": "A. O. Smith",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Milwaukee",
+    "hqRegion": "Wisconsin"
+  },
+  {
+    "ticker": "ABT",
+    "exchange": "NYSE",
+    "name": "Abbott Laboratories",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "North Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "ABBV",
+    "exchange": "NYSE",
+    "name": "AbbVie",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "North Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "ACN",
+    "exchange": "NYSE",
+    "name": "Accenture",
+    "sector": "Information Technology",
+    "subIndustry": "IT Consulting & Other Services",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "ADBE",
+    "exchange": "NASDAQ",
+    "name": "Adobe Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "AMD",
+    "exchange": "NASDAQ",
+    "name": "Advanced Micro Devices",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "AES",
+    "exchange": "NYSE",
+    "name": "AES Corporation",
+    "sector": "Utilities",
+    "subIndustry": "Independent Power Producers & Energy Traders",
+    "hqCity": "Arlington",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "AFL",
+    "exchange": "NYSE",
+    "name": "Aflac",
+    "sector": "Financials",
+    "subIndustry": "Life & Health Insurance",
+    "hqCity": "Columbus",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "A",
+    "exchange": "NYSE",
+    "name": "Agilent Technologies",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "APD",
+    "exchange": "NYSE",
+    "name": "Air Products",
+    "sector": "Materials",
+    "subIndustry": "Industrial Gases",
+    "hqCity": "Upper Macungie Township",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "ABNB",
+    "exchange": "NASDAQ",
+    "name": "Airbnb",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "AKAM",
+    "exchange": "NASDAQ",
+    "name": "Akamai Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Internet Services & Infrastructure",
+    "hqCity": "Cambridge",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "ALB",
+    "exchange": "NYSE",
+    "name": "Albemarle Corporation",
+    "sector": "Materials",
+    "subIndustry": "Specialty Chemicals",
+    "hqCity": "Charlotte",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "ARE",
+    "exchange": "NYSE",
+    "name": "Alexandria Real Estate Equities",
+    "sector": "Real Estate",
+    "subIndustry": "Office REITs",
+    "hqCity": "Pasadena",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "ALGN",
+    "exchange": "NASDAQ",
+    "name": "Align Technology",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Supplies",
+    "hqCity": "Tempe",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "ALLE",
+    "exchange": "NYSE",
+    "name": "Allegion",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "LNT",
+    "exchange": "NASDAQ",
+    "name": "Alliant Energy",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Madison",
+    "hqRegion": "Wisconsin"
+  },
+  {
+    "ticker": "ALL",
+    "exchange": "NYSE",
+    "name": "Allstate",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "Northbrook",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "GOOGL",
+    "exchange": "NASDAQ",
+    "name": "Alphabet Inc. (Class A)",
+    "sector": "Communication Services",
+    "subIndustry": "Interactive Media & Services",
+    "hqCity": "Mountain View",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "GOOG",
+    "exchange": "NASDAQ",
+    "name": "Alphabet Inc. (Class C)",
+    "sector": "Communication Services",
+    "subIndustry": "Interactive Media & Services",
+    "hqCity": "Mountain View",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "MO",
+    "exchange": "NYSE",
+    "name": "Altria",
+    "sector": "Consumer Staples",
+    "subIndustry": "Tobacco",
+    "hqCity": "Richmond",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "AMZN",
+    "exchange": "NASDAQ",
+    "name": "Amazon",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Broadline Retail",
+    "hqCity": "Seattle",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "AMCR",
+    "exchange": "NYSE",
+    "name": "Amcor",
+    "sector": "Materials",
+    "subIndustry": "Paper & Plastic Packaging Products & Materials",
+    "hqCity": "Warmley",
+    "hqRegion": "United Kingdom"
+  },
+  {
+    "ticker": "AEE",
+    "exchange": "NYSE",
+    "name": "Ameren",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "St. Louis",
+    "hqRegion": "Missouri"
+  },
+  {
+    "ticker": "AEP",
+    "exchange": "NASDAQ",
+    "name": "American Electric Power",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Columbus",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "AXP",
+    "exchange": "NYSE",
+    "name": "American Express",
+    "sector": "Financials",
+    "subIndustry": "Consumer Finance",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "AIG",
+    "exchange": "NYSE",
+    "name": "American International Group",
+    "sector": "Financials",
+    "subIndustry": "Multi-line Insurance",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "AMT",
+    "exchange": "NYSE",
+    "name": "American Tower",
+    "sector": "Real Estate",
+    "subIndustry": "Telecom Tower REITs",
+    "hqCity": "Boston",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "AWK",
+    "exchange": "NYSE",
+    "name": "American Water Works",
+    "sector": "Utilities",
+    "subIndustry": "Water Utilities",
+    "hqCity": "Camden",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "AMP",
+    "exchange": "NYSE",
+    "name": "Ameriprise Financial",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "Minneapolis",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "AME",
+    "exchange": "NYSE",
+    "name": "Ametek",
+    "sector": "Industrials",
+    "subIndustry": "Electrical Components & Equipment",
+    "hqCity": "Berwyn",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "AMGN",
+    "exchange": "NASDAQ",
+    "name": "Amgen",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "Thousand Oaks",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "APH",
+    "exchange": "NYSE",
+    "name": "Amphenol",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Components",
+    "hqCity": "Wallingford",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "ADI",
+    "exchange": "NASDAQ",
+    "name": "Analog Devices",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Wilmington",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "AON",
+    "exchange": "NYSE",
+    "name": "Aon plc",
+    "sector": "Financials",
+    "subIndustry": "Insurance Brokers",
+    "hqCity": "London",
+    "hqRegion": "United Kingdom"
+  },
+  {
+    "ticker": "APA",
+    "exchange": "NASDAQ",
+    "name": "APA Corporation",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "APO",
+    "exchange": "NYSE",
+    "name": "Apollo Global Management",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "AAPL",
+    "exchange": "NASDAQ",
+    "name": "Apple Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "Cupertino",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "AMAT",
+    "exchange": "NASDAQ",
+    "name": "Applied Materials",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductor Materials & Equipment",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "APP",
+    "exchange": "NASDAQ",
+    "name": "AppLovin",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Palo Alto",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "APTV",
+    "exchange": "NYSE",
+    "name": "Aptiv",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Automotive Parts & Equipment",
+    "hqCity": "Schaffhausen",
+    "hqRegion": "Switzerland"
+  },
+  {
+    "ticker": "ACGL",
+    "exchange": "NASDAQ",
+    "name": "Arch Capital Group",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "Hamilton",
+    "hqRegion": "Bermuda"
+  },
+  {
+    "ticker": "ADM",
+    "exchange": "NYSE",
+    "name": "Archer Daniels Midland",
+    "sector": "Consumer Staples",
+    "subIndustry": "Agricultural Products & Services",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "ARES",
+    "exchange": "NYSE",
+    "name": "Ares Management",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "Los Angeles",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "ANET",
+    "exchange": "NYSE",
+    "name": "Arista Networks",
+    "sector": "Information Technology",
+    "subIndustry": "Communications Equipment",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "AJG",
+    "exchange": "NYSE",
+    "name": "Arthur J. Gallagher & Co.",
+    "sector": "Financials",
+    "subIndustry": "Insurance Brokers",
+    "hqCity": "Rolling Meadows",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "AIZ",
+    "exchange": "NYSE",
+    "name": "Assurant",
+    "sector": "Financials",
+    "subIndustry": "Multi-line Insurance",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "T",
+    "exchange": "NYSE",
+    "name": "AT&T",
+    "sector": "Communication Services",
+    "subIndustry": "Integrated Telecommunication Services",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "ATO",
+    "exchange": "NYSE",
+    "name": "Atmos Energy",
+    "sector": "Utilities",
+    "subIndustry": "Gas Utilities",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "ADSK",
+    "exchange": "NASDAQ",
+    "name": "Autodesk",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "ADP",
+    "exchange": "NASDAQ",
+    "name": "Automatic Data Processing",
+    "sector": "Industrials",
+    "subIndustry": "Human Resource & Employment Services",
+    "hqCity": "Roseland",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "AZO",
+    "exchange": "NYSE",
+    "name": "AutoZone",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Automotive Retail",
+    "hqCity": "Memphis",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "AVB",
+    "exchange": "NYSE",
+    "name": "AvalonBay Communities",
+    "sector": "Real Estate",
+    "subIndustry": "Multi-Family Residential REITs",
+    "hqCity": "Arlington",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "AVY",
+    "exchange": "NYSE",
+    "name": "Avery Dennison",
+    "sector": "Materials",
+    "subIndustry": "Paper & Plastic Packaging Products & Materials",
+    "hqCity": "Mentor",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "AXON",
+    "exchange": "NASDAQ",
+    "name": "Axon Enterprise",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Scottsdale",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "BKR",
+    "exchange": "NASDAQ",
+    "name": "Baker Hughes",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Equipment & Services",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "BALL",
+    "exchange": "NYSE",
+    "name": "Ball Corporation",
+    "sector": "Materials",
+    "subIndustry": "Metal, Glass & Plastic Containers",
+    "hqCity": "Broomfield",
+    "hqRegion": "Colorado"
+  },
+  {
+    "ticker": "BAC",
+    "exchange": "NYSE",
+    "name": "Bank of America",
+    "sector": "Financials",
+    "subIndustry": "Diversified Banks",
+    "hqCity": "Charlotte",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "BAX",
+    "exchange": "NYSE",
+    "name": "Baxter International",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Deerfield",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "BDX",
+    "exchange": "NYSE",
+    "name": "Becton Dickinson",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Franklin Lakes",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "BRK.B",
+    "exchange": "NYSE",
+    "name": "Berkshire Hathaway",
+    "sector": "Financials",
+    "subIndustry": "Multi-Sector Holdings",
+    "hqCity": "Omaha",
+    "hqRegion": "Nebraska"
+  },
+  {
+    "ticker": "BBY",
+    "exchange": "NYSE",
+    "name": "Best Buy",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Computer & Electronics Retail",
+    "hqCity": "Richfield",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "TECH",
+    "exchange": "NASDAQ",
+    "name": "Bio-Techne",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Minneapolis",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "BIIB",
+    "exchange": "NASDAQ",
+    "name": "Biogen",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "Cambridge",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "BLK",
+    "exchange": "NYSE",
+    "name": "BlackRock",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "BX",
+    "exchange": "NYSE",
+    "name": "Blackstone Inc.",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "XYZ",
+    "exchange": "NYSE",
+    "name": "Block, Inc.",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "Oakland",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "BNY",
+    "exchange": "NYSE",
+    "name": "BNY Mellon",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "BA",
+    "exchange": "NYSE",
+    "name": "Boeing",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Arlington",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "BKNG",
+    "exchange": "NASDAQ",
+    "name": "Booking Holdings",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "Norwalk",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "BSX",
+    "exchange": "NYSE",
+    "name": "Boston Scientific",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Marlborough",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "BMY",
+    "exchange": "NYSE",
+    "name": "Bristol Myers Squibb",
+    "sector": "Health Care",
+    "subIndustry": "Pharmaceuticals",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "AVGO",
+    "exchange": "NASDAQ",
+    "name": "Broadcom",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Palo Alto",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "BR",
+    "exchange": "NYSE",
+    "name": "Broadridge Financial Solutions",
+    "sector": "Industrials",
+    "subIndustry": "Data Processing & Outsourced Services",
+    "hqCity": "Lake Success",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "BRO",
+    "exchange": "NYSE",
+    "name": "Brown & Brown",
+    "sector": "Financials",
+    "subIndustry": "Insurance Brokers",
+    "hqCity": "Daytona Beach",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "BF.B",
+    "exchange": "NYSE",
+    "name": "Brown–Forman",
+    "sector": "Consumer Staples",
+    "subIndustry": "Distillers & Vintners",
+    "hqCity": "Louisville",
+    "hqRegion": "Kentucky"
+  },
+  {
+    "ticker": "BLDR",
+    "exchange": "NYSE",
+    "name": "Builders FirstSource",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Irving",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "BG",
+    "exchange": "NYSE",
+    "name": "Bunge Global",
+    "sector": "Consumer Staples",
+    "subIndustry": "Agricultural Products & Services",
+    "hqCity": "Chesterfield",
+    "hqRegion": "Missouri"
+  },
+  {
+    "ticker": "BXP",
+    "exchange": "NYSE",
+    "name": "BXP, Inc.",
+    "sector": "Real Estate",
+    "subIndustry": "Office REITs",
+    "hqCity": "Boston",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "CHRW",
+    "exchange": "NASDAQ",
+    "name": "C.H. Robinson",
+    "sector": "Industrials",
+    "subIndustry": "Air Freight & Logistics",
+    "hqCity": "Eden Prairie",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "CDNS",
+    "exchange": "NASDAQ",
+    "name": "Cadence Design Systems",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "CPT",
+    "exchange": "NYSE",
+    "name": "Camden Property Trust",
+    "sector": "Real Estate",
+    "subIndustry": "Multi-Family Residential REITs",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "COF",
+    "exchange": "NYSE",
+    "name": "Capital One",
+    "sector": "Financials",
+    "subIndustry": "Consumer Finance",
+    "hqCity": "Tysons Corner",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "CAH",
+    "exchange": "NYSE",
+    "name": "Cardinal Health",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Distributors",
+    "hqCity": "Dublin",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "CCL",
+    "exchange": "NYSE",
+    "name": "Carnival Corporation",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "Miami",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "CARR",
+    "exchange": "NYSE",
+    "name": "Carrier Global",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Palm Beach Gardens",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "CVNA",
+    "exchange": "NYSE",
+    "name": "Carvana",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Automotive Retail",
+    "hqCity": "Tempe",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "CASY",
+    "exchange": "NASDAQ",
+    "name": "Casey's",
+    "sector": "Consumer Staples",
+    "subIndustry": "Food Retail",
+    "hqCity": "Ankeny",
+    "hqRegion": "Iowa"
+  },
+  {
+    "ticker": "CAT",
+    "exchange": "NYSE",
+    "name": "Caterpillar Inc.",
+    "sector": "Industrials",
+    "subIndustry": "Construction Machinery & Heavy Transportation Equipment",
+    "hqCity": "Irving",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "CBRE",
+    "exchange": "NYSE",
+    "name": "CBRE Group",
+    "sector": "Real Estate",
+    "subIndustry": "Real Estate Services",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "CDW",
+    "exchange": "NASDAQ",
+    "name": "CDW Corporation",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Distributors",
+    "hqCity": "Vernon Hills",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "COR",
+    "exchange": "NYSE",
+    "name": "Cencora",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Distributors",
+    "hqCity": "Conshohocken",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "CNC",
+    "exchange": "NYSE",
+    "name": "Centene Corporation",
+    "sector": "Health Care",
+    "subIndustry": "Managed Health Care",
+    "hqCity": "St. Louis",
+    "hqRegion": "Missouri"
+  },
+  {
+    "ticker": "CNP",
+    "exchange": "NYSE",
+    "name": "CenterPoint Energy",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "CF",
+    "exchange": "NYSE",
+    "name": "CF Industries",
+    "sector": "Materials",
+    "subIndustry": "Fertilizers & Agricultural Chemicals",
+    "hqCity": "Deerfield",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "CRL",
+    "exchange": "NYSE",
+    "name": "Charles River Laboratories",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Wilmington",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "SCHW",
+    "exchange": "NYSE",
+    "name": "Charles Schwab Corporation",
+    "sector": "Financials",
+    "subIndustry": "Investment Banking & Brokerage",
+    "hqCity": "Westlake",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "CHTR",
+    "exchange": "NASDAQ",
+    "name": "Charter Communications",
+    "sector": "Communication Services",
+    "subIndustry": "Cable & Satellite",
+    "hqCity": "Stamford",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "CVX",
+    "exchange": "NYSE",
+    "name": "Chevron Corporation",
+    "sector": "Energy",
+    "subIndustry": "Integrated Oil & Gas",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "CMG",
+    "exchange": "NYSE",
+    "name": "Chipotle Mexican Grill",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Restaurants",
+    "hqCity": "Newport Beach",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "CB",
+    "exchange": "NYSE",
+    "name": "Chubb Limited",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "Zurich",
+    "hqRegion": "Switzerland"
+  },
+  {
+    "ticker": "CHD",
+    "exchange": "NYSE",
+    "name": "Church & Dwight",
+    "sector": "Consumer Staples",
+    "subIndustry": "Household Products",
+    "hqCity": "Ewing",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "CIEN",
+    "exchange": "NYSE",
+    "name": "Ciena",
+    "sector": "Information Technology",
+    "subIndustry": "Communications Equipment",
+    "hqCity": "Hanover",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "CI",
+    "exchange": "NYSE",
+    "name": "Cigna",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Services",
+    "hqCity": "Bloomfield",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "CINF",
+    "exchange": "NASDAQ",
+    "name": "Cincinnati Financial",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "Fairfield",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "CTAS",
+    "exchange": "NASDAQ",
+    "name": "Cintas",
+    "sector": "Industrials",
+    "subIndustry": "Diversified Support Services",
+    "hqCity": "Mason",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "CSCO",
+    "exchange": "NASDAQ",
+    "name": "Cisco",
+    "sector": "Information Technology",
+    "subIndustry": "Communications Equipment",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "C",
+    "exchange": "NYSE",
+    "name": "Citigroup",
+    "sector": "Financials",
+    "subIndustry": "Diversified Banks",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "CFG",
+    "exchange": "NYSE",
+    "name": "Citizens Financial Group",
+    "sector": "Financials",
+    "subIndustry": "Regional Banks",
+    "hqCity": "Providence",
+    "hqRegion": "Rhode Island"
+  },
+  {
+    "ticker": "CLX",
+    "exchange": "NYSE",
+    "name": "Clorox",
+    "sector": "Consumer Staples",
+    "subIndustry": "Household Products",
+    "hqCity": "Oakland",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "CME",
+    "exchange": "NASDAQ",
+    "name": "CME Group",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "CMS",
+    "exchange": "NYSE",
+    "name": "CMS Energy",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Jackson",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "KO",
+    "exchange": "NYSE",
+    "name": "Coca-Cola Company (The)",
+    "sector": "Consumer Staples",
+    "subIndustry": "Soft Drinks & Non-alcoholic Beverages",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "CTSH",
+    "exchange": "NASDAQ",
+    "name": "Cognizant",
+    "sector": "Information Technology",
+    "subIndustry": "IT Consulting & Other Services",
+    "hqCity": "Teaneck",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "COHR",
+    "exchange": "NYSE",
+    "name": "Coherent Corp.",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Components",
+    "hqCity": "Saxonburg",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "COIN",
+    "exchange": "NASDAQ",
+    "name": "Coinbase",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "CL",
+    "exchange": "NYSE",
+    "name": "Colgate-Palmolive",
+    "sector": "Consumer Staples",
+    "subIndustry": "Household Products",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "CMCSA",
+    "exchange": "NASDAQ",
+    "name": "Comcast",
+    "sector": "Communication Services",
+    "subIndustry": "Cable & Satellite",
+    "hqCity": "Philadelphia",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "FIX",
+    "exchange": "NYSE",
+    "name": "Comfort Systems USA",
+    "sector": "Industrials",
+    "subIndustry": "Construction & Engineering",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "COP",
+    "exchange": "NYSE",
+    "name": "ConocoPhillips",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "ED",
+    "exchange": "NYSE",
+    "name": "Consolidated Edison",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "STZ",
+    "exchange": "NYSE",
+    "name": "Constellation Brands",
+    "sector": "Consumer Staples",
+    "subIndustry": "Distillers & Vintners",
+    "hqCity": "Rochester",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "CEG",
+    "exchange": "NASDAQ",
+    "name": "Constellation Energy",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Baltimore",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "COO",
+    "exchange": "NASDAQ",
+    "name": "Cooper Companies (The)",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Supplies",
+    "hqCity": "San Ramon",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "CPRT",
+    "exchange": "NASDAQ",
+    "name": "Copart",
+    "sector": "Industrials",
+    "subIndustry": "Diversified Support Services",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "GLW",
+    "exchange": "NYSE",
+    "name": "Corning Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Components",
+    "hqCity": "Corning",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "CPAY",
+    "exchange": "NYSE",
+    "name": "Corpay",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "CTVA",
+    "exchange": "NYSE",
+    "name": "Corteva",
+    "sector": "Materials",
+    "subIndustry": "Fertilizers & Agricultural Chemicals",
+    "hqCity": "Indianapolis",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "CSGP",
+    "exchange": "NASDAQ",
+    "name": "CoStar Group",
+    "sector": "Real Estate",
+    "subIndustry": "Real Estate Services",
+    "hqCity": "Washington",
+    "hqRegion": "D.C."
+  },
+  {
+    "ticker": "COST",
+    "exchange": "NASDAQ",
+    "name": "Costco",
+    "sector": "Consumer Staples",
+    "subIndustry": "Consumer Staples Merchandise Retail",
+    "hqCity": "Issaquah",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "CRH",
+    "exchange": "NYSE",
+    "name": "CRH plc",
+    "sector": "Materials",
+    "subIndustry": "Construction Materials",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "CRWD",
+    "exchange": "NASDAQ",
+    "name": "CrowdStrike",
+    "sector": "Information Technology",
+    "subIndustry": "Systems Software",
+    "hqCity": "Austin",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "CCI",
+    "exchange": "NYSE",
+    "name": "Crown Castle",
+    "sector": "Real Estate",
+    "subIndustry": "Telecom Tower REITs",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "CSX",
+    "exchange": "NASDAQ",
+    "name": "CSX Corporation",
+    "sector": "Industrials",
+    "subIndustry": "Rail Transportation",
+    "hqCity": "Jacksonville",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "CMI",
+    "exchange": "NYSE",
+    "name": "Cummins",
+    "sector": "Industrials",
+    "subIndustry": "Construction Machinery & Heavy Transportation Equipment",
+    "hqCity": "Columbus",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "CVS",
+    "exchange": "NYSE",
+    "name": "CVS Health",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Services",
+    "hqCity": "Woonsocket",
+    "hqRegion": "Rhode Island"
+  },
+  {
+    "ticker": "DHR",
+    "exchange": "NYSE",
+    "name": "Danaher Corporation",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Washington",
+    "hqRegion": "D.C."
+  },
+  {
+    "ticker": "DRI",
+    "exchange": "NYSE",
+    "name": "Darden Restaurants",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Restaurants",
+    "hqCity": "Orlando",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "DDOG",
+    "exchange": "NASDAQ",
+    "name": "Datadog",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "DVA",
+    "exchange": "NYSE",
+    "name": "DaVita",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Services",
+    "hqCity": "Denver",
+    "hqRegion": "Colorado"
+  },
+  {
+    "ticker": "DECK",
+    "exchange": "NYSE",
+    "name": "Deckers Brands",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Footwear",
+    "hqCity": "Goleta",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "DE",
+    "exchange": "NYSE",
+    "name": "Deere & Company",
+    "sector": "Industrials",
+    "subIndustry": "Agricultural & Farm Machinery",
+    "hqCity": "Moline",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "DELL",
+    "exchange": "NYSE",
+    "name": "Dell Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "Round Rock",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "DAL",
+    "exchange": "NYSE",
+    "name": "Delta Air Lines",
+    "sector": "Industrials",
+    "subIndustry": "Passenger Airlines",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "DVN",
+    "exchange": "NYSE",
+    "name": "Devon Energy",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Oklahoma City",
+    "hqRegion": "Oklahoma"
+  },
+  {
+    "ticker": "DXCM",
+    "exchange": "NASDAQ",
+    "name": "Dexcom",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "San Diego",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "FANG",
+    "exchange": "NASDAQ",
+    "name": "Diamondback Energy",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Midland",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "DLR",
+    "exchange": "NYSE",
+    "name": "Digital Realty",
+    "sector": "Real Estate",
+    "subIndustry": "Data Center REITs",
+    "hqCity": "Austin",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "DG",
+    "exchange": "NYSE",
+    "name": "Dollar General",
+    "sector": "Consumer Staples",
+    "subIndustry": "Consumer Staples Merchandise Retail",
+    "hqCity": "Goodlettsville",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "DLTR",
+    "exchange": "NASDAQ",
+    "name": "Dollar Tree",
+    "sector": "Consumer Staples",
+    "subIndustry": "Consumer Staples Merchandise Retail",
+    "hqCity": "Chesapeake",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "D",
+    "exchange": "NYSE",
+    "name": "Dominion Energy",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Richmond",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "DPZ",
+    "exchange": "NYSE",
+    "name": "Domino's",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Restaurants",
+    "hqCity": "Ann Arbor",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "DASH",
+    "exchange": "NASDAQ",
+    "name": "DoorDash",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Specialized Consumer Services",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "DOV",
+    "exchange": "NYSE",
+    "name": "Dover Corporation",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Downers Grove",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "DOW",
+    "exchange": "NYSE",
+    "name": "Dow Inc.",
+    "sector": "Materials",
+    "subIndustry": "Commodity Chemicals",
+    "hqCity": "Midland",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "DHI",
+    "exchange": "NYSE",
+    "name": "D. R. Horton",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Homebuilding",
+    "hqCity": "Arlington",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "DTE",
+    "exchange": "NYSE",
+    "name": "DTE Energy",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Detroit",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "DUK",
+    "exchange": "NYSE",
+    "name": "Duke Energy",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Charlotte",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "DD",
+    "exchange": "NYSE",
+    "name": "DuPont",
+    "sector": "Materials",
+    "subIndustry": "Specialty Chemicals",
+    "hqCity": "Wilmington",
+    "hqRegion": "Delaware"
+  },
+  {
+    "ticker": "ETN",
+    "exchange": "NYSE",
+    "name": "Eaton Corporation",
+    "sector": "Industrials",
+    "subIndustry": "Electrical Components & Equipment",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "EBAY",
+    "exchange": "NASDAQ",
+    "name": "eBay Inc.",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Broadline Retail",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "ECHO",
+    "exchange": "NASDAQ",
+    "name": "EchoStar",
+    "sector": "Communication Services",
+    "subIndustry": "Wireless Telecommunication Services",
+    "hqCity": "Englewood",
+    "hqRegion": "Colorado"
+  },
+  {
+    "ticker": "ECL",
+    "exchange": "NYSE",
+    "name": "Ecolab",
+    "sector": "Materials",
+    "subIndustry": "Specialty Chemicals",
+    "hqCity": "Saint Paul",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "EIX",
+    "exchange": "NYSE",
+    "name": "Edison International",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Rosemead",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "EW",
+    "exchange": "NYSE",
+    "name": "Edwards Lifesciences",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Irvine",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "EA",
+    "exchange": "NASDAQ",
+    "name": "Electronic Arts",
+    "sector": "Communication Services",
+    "subIndustry": "Interactive Home Entertainment",
+    "hqCity": "Redwood City",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "ELV",
+    "exchange": "NYSE",
+    "name": "Elevance Health",
+    "sector": "Health Care",
+    "subIndustry": "Managed Health Care",
+    "hqCity": "Indianapolis",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "EME",
+    "exchange": "NYSE",
+    "name": "Emcor",
+    "sector": "Industrials",
+    "subIndustry": "Construction & Engineering",
+    "hqCity": "Norwalk",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "EMR",
+    "exchange": "NYSE",
+    "name": "Emerson Electric",
+    "sector": "Industrials",
+    "subIndustry": "Electrical Components & Equipment",
+    "hqCity": "Ferguson",
+    "hqRegion": "Missouri"
+  },
+  {
+    "ticker": "ETR",
+    "exchange": "NYSE",
+    "name": "Entergy",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "New Orleans",
+    "hqRegion": "Louisiana"
+  },
+  {
+    "ticker": "EOG",
+    "exchange": "NYSE",
+    "name": "EOG Resources",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "EQT",
+    "exchange": "NYSE",
+    "name": "EQT Corporation",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Pittsburgh",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "EFX",
+    "exchange": "NYSE",
+    "name": "Equifax",
+    "sector": "Industrials",
+    "subIndustry": "Research & Consulting Services",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "EQIX",
+    "exchange": "NASDAQ",
+    "name": "Equinix",
+    "sector": "Real Estate",
+    "subIndustry": "Data Center REITs",
+    "hqCity": "Redwood City",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "EQR",
+    "exchange": "NYSE",
+    "name": "Equity Residential",
+    "sector": "Real Estate",
+    "subIndustry": "Multi-Family Residential REITs",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "ERIE",
+    "exchange": "NASDAQ",
+    "name": "Erie Indemnity",
+    "sector": "Financials",
+    "subIndustry": "Insurance Brokers",
+    "hqCity": "Erie",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "ESS",
+    "exchange": "NYSE",
+    "name": "Essex Property Trust",
+    "sector": "Real Estate",
+    "subIndustry": "Multi-Family Residential REITs",
+    "hqCity": "San Mateo",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "EL",
+    "exchange": "NYSE",
+    "name": "Estée Lauder Companies (The)",
+    "sector": "Consumer Staples",
+    "subIndustry": "Personal Care Products",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "EG",
+    "exchange": "NYSE",
+    "name": "Everest Group",
+    "sector": "Financials",
+    "subIndustry": "Reinsurance",
+    "hqCity": "Hamilton",
+    "hqRegion": "Bermuda"
+  },
+  {
+    "ticker": "EVRG",
+    "exchange": "NYSE",
+    "name": "Evergy",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Kansas City",
+    "hqRegion": "Missouri"
+  },
+  {
+    "ticker": "ES",
+    "exchange": "NYSE",
+    "name": "Eversource Energy",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Hartford",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "EXC",
+    "exchange": "NASDAQ",
+    "name": "Exelon",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "EXE",
+    "exchange": "NASDAQ",
+    "name": "Expand Energy",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Oklahoma City",
+    "hqRegion": "Oklahoma"
+  },
+  {
+    "ticker": "EXPE",
+    "exchange": "NASDAQ",
+    "name": "Expedia Group",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "Seattle",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "EXPD",
+    "exchange": "NASDAQ",
+    "name": "Expeditors International",
+    "sector": "Industrials",
+    "subIndustry": "Air Freight & Logistics",
+    "hqCity": "Seattle",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "EXR",
+    "exchange": "NYSE",
+    "name": "Extra Space Storage",
+    "sector": "Real Estate",
+    "subIndustry": "Self-Storage REITs",
+    "hqCity": "Salt Lake City",
+    "hqRegion": "Utah"
+  },
+  {
+    "ticker": "XOM",
+    "exchange": "NYSE",
+    "name": "ExxonMobil",
+    "sector": "Energy",
+    "subIndustry": "Integrated Oil & Gas",
+    "hqCity": "Irving",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "FFIV",
+    "exchange": "NASDAQ",
+    "name": "F5, Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Communications Equipment",
+    "hqCity": "Seattle",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "FDS",
+    "exchange": "NYSE",
+    "name": "FactSet",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "Norwalk",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "FICO",
+    "exchange": "NYSE",
+    "name": "Fair Isaac",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Bozeman",
+    "hqRegion": "Montana"
+  },
+  {
+    "ticker": "FAST",
+    "exchange": "NASDAQ",
+    "name": "Fastenal",
+    "sector": "Industrials",
+    "subIndustry": "Trading Companies & Distributors",
+    "hqCity": "Winona",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "FRT",
+    "exchange": "NYSE",
+    "name": "Federal Realty Investment Trust",
+    "sector": "Real Estate",
+    "subIndustry": "Retail REITs",
+    "hqCity": "Rockville",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "FDX",
+    "exchange": "NYSE",
+    "name": "FedEx",
+    "sector": "Industrials",
+    "subIndustry": "Air Freight & Logistics",
+    "hqCity": "Memphis",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "FDXF",
+    "exchange": "NYSE",
+    "name": "FedEx Freight",
+    "sector": "Industrials",
+    "subIndustry": "Cargo Ground Transportation",
+    "hqCity": "Memphis",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "FIS",
+    "exchange": "NYSE",
+    "name": "Fidelity National Information Services",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "Jacksonville",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "FITB",
+    "exchange": "NYSE",
+    "name": "Fifth Third Bancorp",
+    "sector": "Financials",
+    "subIndustry": "Regional Banks",
+    "hqCity": "Cincinnati",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "FSLR",
+    "exchange": "NASDAQ",
+    "name": "First Solar",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Tempe",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "FE",
+    "exchange": "NYSE",
+    "name": "FirstEnergy",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Akron",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "FISV",
+    "exchange": "NASDAQ",
+    "name": "Fiserv",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "Brookfield",
+    "hqRegion": "Wisconsin"
+  },
+  {
+    "ticker": "FLEX",
+    "exchange": "NASDAQ",
+    "name": "Flex Ltd.",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Manufacturing Services",
+    "hqCity": "Austin",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "F",
+    "exchange": "NYSE",
+    "name": "Ford Motor Company",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Automobile Manufacturers",
+    "hqCity": "Dearborn",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "FTNT",
+    "exchange": "NASDAQ",
+    "name": "Fortinet",
+    "sector": "Information Technology",
+    "subIndustry": "Systems Software",
+    "hqCity": "Sunnyvale",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "FTV",
+    "exchange": "NYSE",
+    "name": "Fortive",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Everett",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "FOXA",
+    "exchange": "NASDAQ",
+    "name": "Fox Corporation (Class A)",
+    "sector": "Communication Services",
+    "subIndustry": "Broadcasting",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "FOX",
+    "exchange": "NASDAQ",
+    "name": "Fox Corporation (Class B)",
+    "sector": "Communication Services",
+    "subIndustry": "Broadcasting",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "BEN",
+    "exchange": "NYSE",
+    "name": "Franklin Resources",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "San Mateo",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "FCX",
+    "exchange": "NYSE",
+    "name": "Freeport-McMoRan",
+    "sector": "Materials",
+    "subIndustry": "Copper",
+    "hqCity": "Phoenix",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "GRMN",
+    "exchange": "NYSE",
+    "name": "Garmin",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Consumer Electronics",
+    "hqCity": "Schaffhausen",
+    "hqRegion": "Switzerland"
+  },
+  {
+    "ticker": "IT",
+    "exchange": "NYSE",
+    "name": "Gartner",
+    "sector": "Information Technology",
+    "subIndustry": "IT Consulting & Other Services",
+    "hqCity": "Stamford",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "GE",
+    "exchange": "NYSE",
+    "name": "GE Aerospace",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Evendale",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "GEHC",
+    "exchange": "NASDAQ",
+    "name": "GE HealthCare",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "GEV",
+    "exchange": "NYSE",
+    "name": "GE Vernova",
+    "sector": "Industrials",
+    "subIndustry": "Heavy Electrical Equipment",
+    "hqCity": "Cambridge",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "GEN",
+    "exchange": "NASDAQ",
+    "name": "Gen Digital",
+    "sector": "Information Technology",
+    "subIndustry": "Systems Software",
+    "hqCity": "Tempe",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "GNRC",
+    "exchange": "NYSE",
+    "name": "Generac",
+    "sector": "Industrials",
+    "subIndustry": "Heavy Electrical Equipment",
+    "hqCity": "Waukesha",
+    "hqRegion": "Wisconsin"
+  },
+  {
+    "ticker": "GD",
+    "exchange": "NYSE",
+    "name": "General Dynamics",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Reston",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "GIS",
+    "exchange": "NYSE",
+    "name": "General Mills",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Golden Valley",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "GM",
+    "exchange": "NYSE",
+    "name": "General Motors",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Automobile Manufacturers",
+    "hqCity": "Detroit",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "GPC",
+    "exchange": "NYSE",
+    "name": "Genuine Parts Company",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Distributors",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "GILD",
+    "exchange": "NASDAQ",
+    "name": "Gilead Sciences",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "Foster City",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "GPN",
+    "exchange": "NYSE",
+    "name": "Global Payments",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "GL",
+    "exchange": "NYSE",
+    "name": "Globe Life",
+    "sector": "Financials",
+    "subIndustry": "Life & Health Insurance",
+    "hqCity": "McKinney",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "GDDY",
+    "exchange": "NYSE",
+    "name": "GoDaddy",
+    "sector": "Information Technology",
+    "subIndustry": "Internet Services & Infrastructure",
+    "hqCity": "Tempe",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "GS",
+    "exchange": "NYSE",
+    "name": "Goldman Sachs",
+    "sector": "Financials",
+    "subIndustry": "Investment Banking & Brokerage",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "HAL",
+    "exchange": "NYSE",
+    "name": "Halliburton",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Equipment & Services",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "HIG",
+    "exchange": "NYSE",
+    "name": "Hartford (The)",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "Hartford",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "HAS",
+    "exchange": "NASDAQ",
+    "name": "Hasbro",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Leisure Products",
+    "hqCity": "Pawtucket",
+    "hqRegion": "Rhode Island"
+  },
+  {
+    "ticker": "HCA",
+    "exchange": "NYSE",
+    "name": "HCA Healthcare",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Facilities",
+    "hqCity": "Nashville",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "DOC",
+    "exchange": "NYSE",
+    "name": "Healthpeak Properties",
+    "sector": "Real Estate",
+    "subIndustry": "Health Care REITs",
+    "hqCity": "Denver",
+    "hqRegion": "Colorado"
+  },
+  {
+    "ticker": "HSIC",
+    "exchange": "NASDAQ",
+    "name": "Henry Schein",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Distributors",
+    "hqCity": "Melville",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "HSY",
+    "exchange": "NYSE",
+    "name": "Hershey Company (The)",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Hershey",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "HPE",
+    "exchange": "NYSE",
+    "name": "Hewlett Packard Enterprise",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "HLT",
+    "exchange": "NYSE",
+    "name": "Hilton Worldwide",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "Tysons Corner",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "HD",
+    "exchange": "NYSE",
+    "name": "Home Depot (The)",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Home Improvement Retail",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "HONA",
+    "exchange": "NASDAQ",
+    "name": "Honeywell Aerospace",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Phoenix",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "HON",
+    "exchange": "NASDAQ",
+    "name": "Honeywell Technologies",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Conglomerates",
+    "hqCity": "Charlotte",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "HRL",
+    "exchange": "NYSE",
+    "name": "Hormel Foods",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Austin",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "HST",
+    "exchange": "NASDAQ",
+    "name": "Host Hotels & Resorts",
+    "sector": "Real Estate",
+    "subIndustry": "Hotel & Resort REITs",
+    "hqCity": "Bethesda",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "HWM",
+    "exchange": "NYSE",
+    "name": "Howmet Aerospace",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Pittsburgh",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "HPQ",
+    "exchange": "NYSE",
+    "name": "HP Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "Palo Alto",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "HUBB",
+    "exchange": "NYSE",
+    "name": "Hubbell Incorporated",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Shelton",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "HUM",
+    "exchange": "NYSE",
+    "name": "Humana",
+    "sector": "Health Care",
+    "subIndustry": "Managed Health Care",
+    "hqCity": "Louisville",
+    "hqRegion": "Kentucky"
+  },
+  {
+    "ticker": "HBAN",
+    "exchange": "NASDAQ",
+    "name": "Huntington Bancshares",
+    "sector": "Financials",
+    "subIndustry": "Regional Banks",
+    "hqCity": "Columbus",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "HII",
+    "exchange": "NYSE",
+    "name": "Huntington Ingalls Industries",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Newport News",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "IBM",
+    "exchange": "NYSE",
+    "name": "IBM",
+    "sector": "Information Technology",
+    "subIndustry": "IT Consulting & Other Services",
+    "hqCity": "Armonk",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "IEX",
+    "exchange": "NYSE",
+    "name": "IDEX Corporation",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Northbrook",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "IDXX",
+    "exchange": "NASDAQ",
+    "name": "Idexx Laboratories",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Westbrook",
+    "hqRegion": "Maine"
+  },
+  {
+    "ticker": "ITW",
+    "exchange": "NYSE",
+    "name": "Illinois Tool Works",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Glenview",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "INCY",
+    "exchange": "NASDAQ",
+    "name": "Incyte",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "Wilmington",
+    "hqRegion": "Delaware"
+  },
+  {
+    "ticker": "IR",
+    "exchange": "NYSE",
+    "name": "Ingersoll Rand",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Davidson",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "PODD",
+    "exchange": "NASDAQ",
+    "name": "Insulet Corporation",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Acton",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "INTC",
+    "exchange": "NASDAQ",
+    "name": "Intel",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "IBKR",
+    "exchange": "NASDAQ",
+    "name": "Interactive Brokers",
+    "sector": "Financials",
+    "subIndustry": "Investment Banking & Brokerage",
+    "hqCity": "Greenwich",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "ICE",
+    "exchange": "NYSE",
+    "name": "Intercontinental Exchange",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "IFF",
+    "exchange": "NYSE",
+    "name": "International Flavors & Fragrances",
+    "sector": "Materials",
+    "subIndustry": "Specialty Chemicals",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "IP",
+    "exchange": "NYSE",
+    "name": "International Paper",
+    "sector": "Materials",
+    "subIndustry": "Paper & Plastic Packaging Products & Materials",
+    "hqCity": "Memphis",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "INTU",
+    "exchange": "NASDAQ",
+    "name": "Intuit",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Mountain View",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "ISRG",
+    "exchange": "NASDAQ",
+    "name": "Intuitive Surgical",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Sunnyvale",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "IVZ",
+    "exchange": "NYSE",
+    "name": "Invesco",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "INVH",
+    "exchange": "NYSE",
+    "name": "Invitation Homes",
+    "sector": "Real Estate",
+    "subIndustry": "Single-Family Residential REITs",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "IQV",
+    "exchange": "NYSE",
+    "name": "IQVIA",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Durham",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "IRM",
+    "exchange": "NYSE",
+    "name": "Iron Mountain",
+    "sector": "Real Estate",
+    "subIndustry": "Other Specialized REITs",
+    "hqCity": "Portsmouth",
+    "hqRegion": "New Hampshire"
+  },
+  {
+    "ticker": "JBHT",
+    "exchange": "NASDAQ",
+    "name": "J.B. Hunt",
+    "sector": "Industrials",
+    "subIndustry": "Cargo Ground Transportation",
+    "hqCity": "Lowell",
+    "hqRegion": "Arkansas"
+  },
+  {
+    "ticker": "JBL",
+    "exchange": "NYSE",
+    "name": "Jabil",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Manufacturing Services",
+    "hqCity": "St. Petersburg",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "JKHY",
+    "exchange": "NASDAQ",
+    "name": "Jack Henry & Associates",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "Monett",
+    "hqRegion": "Missouri"
+  },
+  {
+    "ticker": "J",
+    "exchange": "NYSE",
+    "name": "Jacobs Solutions",
+    "sector": "Industrials",
+    "subIndustry": "Construction & Engineering",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "JNJ",
+    "exchange": "NYSE",
+    "name": "Johnson & Johnson",
+    "sector": "Health Care",
+    "subIndustry": "Pharmaceuticals",
+    "hqCity": "New Brunswick",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "JCI",
+    "exchange": "NYSE",
+    "name": "Johnson Controls",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Cork",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "JPM",
+    "exchange": "NYSE",
+    "name": "JPMorgan Chase",
+    "sector": "Financials",
+    "subIndustry": "Diversified Banks",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "KVUE",
+    "exchange": "NYSE",
+    "name": "Kenvue",
+    "sector": "Consumer Staples",
+    "subIndustry": "Personal Care Products",
+    "hqCity": "Skillman",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "KDP",
+    "exchange": "NASDAQ",
+    "name": "Keurig Dr Pepper",
+    "sector": "Consumer Staples",
+    "subIndustry": "Soft Drinks & Non-alcoholic Beverages",
+    "hqCity": "Burlington",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "KEY",
+    "exchange": "NYSE",
+    "name": "KeyCorp",
+    "sector": "Financials",
+    "subIndustry": "Regional Banks",
+    "hqCity": "Cleveland",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "KEYS",
+    "exchange": "NYSE",
+    "name": "Keysight Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Equipment & Instruments",
+    "hqCity": "Santa Rosa",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "KMB",
+    "exchange": "NASDAQ",
+    "name": "Kimberly-Clark",
+    "sector": "Consumer Staples",
+    "subIndustry": "Household Products",
+    "hqCity": "Irving",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "KIM",
+    "exchange": "NYSE",
+    "name": "Kimco Realty",
+    "sector": "Real Estate",
+    "subIndustry": "Retail REITs",
+    "hqCity": "Jericho",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "KMI",
+    "exchange": "NYSE",
+    "name": "Kinder Morgan",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Storage & Transportation",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "KKR",
+    "exchange": "NYSE",
+    "name": "KKR & Co.",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "KLAC",
+    "exchange": "NASDAQ",
+    "name": "KLA Corporation",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductor Materials & Equipment",
+    "hqCity": "Milpitas",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "KHC",
+    "exchange": "NASDAQ",
+    "name": "Kraft Heinz",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Chicago",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "KR",
+    "exchange": "NYSE",
+    "name": "Kroger",
+    "sector": "Consumer Staples",
+    "subIndustry": "Food Retail",
+    "hqCity": "Cincinnati",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "LHX",
+    "exchange": "NYSE",
+    "name": "L3Harris",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Melbourne",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "LH",
+    "exchange": "NYSE",
+    "name": "Labcorp",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Services",
+    "hqCity": "Burlington",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "LRCX",
+    "exchange": "NASDAQ",
+    "name": "Lam Research",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductor Materials & Equipment",
+    "hqCity": "Fremont",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "LVS",
+    "exchange": "NYSE",
+    "name": "Las Vegas Sands",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Casinos & Gaming",
+    "hqCity": "Las Vegas",
+    "hqRegion": "Nevada"
+  },
+  {
+    "ticker": "LDOS",
+    "exchange": "NYSE",
+    "name": "Leidos",
+    "sector": "Industrials",
+    "subIndustry": "Diversified Support Services",
+    "hqCity": "Reston",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "LEN",
+    "exchange": "NYSE",
+    "name": "Lennar",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Homebuilding",
+    "hqCity": "Miami",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "LII",
+    "exchange": "NYSE",
+    "name": "Lennox International",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Richardson",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "LLY",
+    "exchange": "NYSE",
+    "name": "Lilly (Eli)",
+    "sector": "Health Care",
+    "subIndustry": "Pharmaceuticals",
+    "hqCity": "Indianapolis",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "LIN",
+    "exchange": "NASDAQ",
+    "name": "Linde plc",
+    "sector": "Materials",
+    "subIndustry": "Industrial Gases",
+    "hqCity": "Guildford",
+    "hqRegion": "United Kingdom"
+  },
+  {
+    "ticker": "LYV",
+    "exchange": "NYSE",
+    "name": "Live Nation Entertainment",
+    "sector": "Communication Services",
+    "subIndustry": "Movies & Entertainment",
+    "hqCity": "Beverly Hills",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "LMT",
+    "exchange": "NYSE",
+    "name": "Lockheed Martin",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Bethesda",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "L",
+    "exchange": "NYSE",
+    "name": "Loews Corporation",
+    "sector": "Financials",
+    "subIndustry": "Multi-line Insurance",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "LOW",
+    "exchange": "NYSE",
+    "name": "Lowe's",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Home Improvement Retail",
+    "hqCity": "Mooresville",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "LULU",
+    "exchange": "NASDAQ",
+    "name": "Lululemon Athletica",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Apparel, Accessories & Luxury Goods",
+    "hqCity": "Vancouver",
+    "hqRegion": "Canada"
+  },
+  {
+    "ticker": "LITE",
+    "exchange": "NASDAQ",
+    "name": "Lumentum",
+    "sector": "Information Technology",
+    "subIndustry": "Communications Equipment",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "LYB",
+    "exchange": "NYSE",
+    "name": "LyondellBasell",
+    "sector": "Materials",
+    "subIndustry": "Specialty Chemicals",
+    "hqCity": "Rotterdam",
+    "hqRegion": "Netherlands"
+  },
+  {
+    "ticker": "MTB",
+    "exchange": "NYSE",
+    "name": "M&T Bank",
+    "sector": "Financials",
+    "subIndustry": "Regional Banks",
+    "hqCity": "Buffalo",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "MPC",
+    "exchange": "NYSE",
+    "name": "Marathon Petroleum",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Refining & Marketing",
+    "hqCity": "Findlay",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "MAR",
+    "exchange": "NASDAQ",
+    "name": "Marriott International",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "Bethesda",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "MRSH",
+    "exchange": "NYSE",
+    "name": "Marsh McLennan",
+    "sector": "Financials",
+    "subIndustry": "Insurance Brokers",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "MLM",
+    "exchange": "NYSE",
+    "name": "Martin Marietta Materials",
+    "sector": "Materials",
+    "subIndustry": "Construction Materials",
+    "hqCity": "Raleigh",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "MRVL",
+    "exchange": "NASDAQ",
+    "name": "Marvell Technology",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "MAS",
+    "exchange": "NYSE",
+    "name": "Masco",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Livonia",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "MA",
+    "exchange": "NYSE",
+    "name": "Mastercard",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "Harrison",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "MKC",
+    "exchange": "NYSE",
+    "name": "McCormick & Company",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Hunt Valley",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "MCD",
+    "exchange": "NYSE",
+    "name": "McDonald's",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Restaurants",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "MCK",
+    "exchange": "NYSE",
+    "name": "McKesson Corporation",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Distributors",
+    "hqCity": "Irving",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "MDT",
+    "exchange": "NYSE",
+    "name": "Medtronic",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Galway",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "MRK",
+    "exchange": "NYSE",
+    "name": "Merck & Co.",
+    "sector": "Health Care",
+    "subIndustry": "Pharmaceuticals",
+    "hqCity": "Kenilworth",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "META",
+    "exchange": "NASDAQ",
+    "name": "Meta Platforms",
+    "sector": "Communication Services",
+    "subIndustry": "Interactive Media & Services",
+    "hqCity": "Menlo Park",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "MET",
+    "exchange": "NYSE",
+    "name": "MetLife",
+    "sector": "Financials",
+    "subIndustry": "Life & Health Insurance",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "MTD",
+    "exchange": "NYSE",
+    "name": "Mettler Toledo",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Columbus",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "MGM",
+    "exchange": "NYSE",
+    "name": "MGM Resorts",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Casinos & Gaming",
+    "hqCity": "Paradise",
+    "hqRegion": "Nevada"
+  },
+  {
+    "ticker": "MCHP",
+    "exchange": "NASDAQ",
+    "name": "Microchip Technology",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Chandler",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "MU",
+    "exchange": "NASDAQ",
+    "name": "Micron Technology",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Boise",
+    "hqRegion": "Idaho"
+  },
+  {
+    "ticker": "MSFT",
+    "exchange": "NASDAQ",
+    "name": "Microsoft",
+    "sector": "Information Technology",
+    "subIndustry": "Systems Software",
+    "hqCity": "Redmond",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "MAA",
+    "exchange": "NYSE",
+    "name": "Mid-America Apartment Communities",
+    "sector": "Real Estate",
+    "subIndustry": "Multi-Family Residential REITs",
+    "hqCity": "Memphis",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "MRNA",
+    "exchange": "NASDAQ",
+    "name": "Moderna",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "Cambridge",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "TAP",
+    "exchange": "NYSE",
+    "name": "Molson Coors Beverage Company",
+    "sector": "Consumer Staples",
+    "subIndustry": "Brewers",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "MDLZ",
+    "exchange": "NASDAQ",
+    "name": "Mondelez International",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "MPWR",
+    "exchange": "NASDAQ",
+    "name": "Monolithic Power Systems",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Kirkland",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "MNST",
+    "exchange": "NASDAQ",
+    "name": "Monster Beverage",
+    "sector": "Consumer Staples",
+    "subIndustry": "Soft Drinks & Non-alcoholic Beverages",
+    "hqCity": "Corona",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "MCO",
+    "exchange": "NYSE",
+    "name": "Moody's Corporation",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "MS",
+    "exchange": "NYSE",
+    "name": "Morgan Stanley",
+    "sector": "Financials",
+    "subIndustry": "Investment Banking & Brokerage",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "MOS",
+    "exchange": "NYSE",
+    "name": "Mosaic Company (The)",
+    "sector": "Materials",
+    "subIndustry": "Fertilizers & Agricultural Chemicals",
+    "hqCity": "Tampa",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "MSI",
+    "exchange": "NYSE",
+    "name": "Motorola Solutions",
+    "sector": "Information Technology",
+    "subIndustry": "Communications Equipment",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "MSCI",
+    "exchange": "NYSE",
+    "name": "MSCI Inc.",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "NDAQ",
+    "exchange": "NASDAQ",
+    "name": "Nasdaq, Inc.",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "NTAP",
+    "exchange": "NASDAQ",
+    "name": "NetApp",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "NFLX",
+    "exchange": "NASDAQ",
+    "name": "Netflix",
+    "sector": "Communication Services",
+    "subIndustry": "Movies & Entertainment",
+    "hqCity": "Los Gatos",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "NEM",
+    "exchange": "NYSE",
+    "name": "Newmont",
+    "sector": "Materials",
+    "subIndustry": "Gold",
+    "hqCity": "Denver",
+    "hqRegion": "Colorado"
+  },
+  {
+    "ticker": "NWSA",
+    "exchange": "NASDAQ",
+    "name": "News Corp (Class A)",
+    "sector": "Communication Services",
+    "subIndustry": "Publishing",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "NWS",
+    "exchange": "NASDAQ",
+    "name": "News Corp (Class B)",
+    "sector": "Communication Services",
+    "subIndustry": "Publishing",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "NEE",
+    "exchange": "NYSE",
+    "name": "NextEra Energy",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Juno Beach",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "NKE",
+    "exchange": "NYSE",
+    "name": "Nike, Inc.",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Apparel, Accessories & Luxury Goods",
+    "hqCity": "Washington County",
+    "hqRegion": "Oregon"
+  },
+  {
+    "ticker": "NI",
+    "exchange": "NYSE",
+    "name": "NiSource",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Merrillville",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "NDSN",
+    "exchange": "NASDAQ",
+    "name": "Nordson Corporation",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Westlake",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "NSC",
+    "exchange": "NYSE",
+    "name": "Norfolk Southern",
+    "sector": "Industrials",
+    "subIndustry": "Rail Transportation",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "NTRS",
+    "exchange": "NASDAQ",
+    "name": "Northern Trust",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "NOC",
+    "exchange": "NYSE",
+    "name": "Northrop Grumman",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "West Falls Church",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "NCLH",
+    "exchange": "NYSE",
+    "name": "Norwegian Cruise Line Holdings",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "Miami-Dade County",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "NRG",
+    "exchange": "NYSE",
+    "name": "NRG Energy",
+    "sector": "Utilities",
+    "subIndustry": "Independent Power Producers & Energy Traders",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "NUE",
+    "exchange": "NYSE",
+    "name": "Nucor",
+    "sector": "Materials",
+    "subIndustry": "Steel",
+    "hqCity": "Charlotte",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "NVDA",
+    "exchange": "NASDAQ",
+    "name": "Nvidia",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "NVR",
+    "exchange": "NYSE",
+    "name": "NVR, Inc.",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Homebuilding",
+    "hqCity": "Reston",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "NXPI",
+    "exchange": "NASDAQ",
+    "name": "NXP Semiconductors",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Eindhoven",
+    "hqRegion": "Netherlands"
+  },
+  {
+    "ticker": "ORLY",
+    "exchange": "NASDAQ",
+    "name": "O’Reilly Automotive",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Automotive Retail",
+    "hqCity": "Springfield",
+    "hqRegion": "Missouri"
+  },
+  {
+    "ticker": "OXY",
+    "exchange": "NYSE",
+    "name": "Occidental Petroleum",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "ODFL",
+    "exchange": "NASDAQ",
+    "name": "Old Dominion",
+    "sector": "Industrials",
+    "subIndustry": "Cargo Ground Transportation",
+    "hqCity": "Thomasville",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "OMC",
+    "exchange": "NYSE",
+    "name": "Omnicom Group",
+    "sector": "Communication Services",
+    "subIndustry": "Advertising",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "ON",
+    "exchange": "NASDAQ",
+    "name": "ON Semiconductor",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Phoenix",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "OKE",
+    "exchange": "NYSE",
+    "name": "Oneok",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Storage & Transportation",
+    "hqCity": "Tulsa",
+    "hqRegion": "Oklahoma"
+  },
+  {
+    "ticker": "ORCL",
+    "exchange": "NYSE",
+    "name": "Oracle Corporation",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Austin",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "OTIS",
+    "exchange": "NYSE",
+    "name": "Otis Worldwide",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Farmington",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "PCAR",
+    "exchange": "NASDAQ",
+    "name": "Paccar",
+    "sector": "Industrials",
+    "subIndustry": "Construction Machinery & Heavy Transportation Equipment",
+    "hqCity": "Bellevue",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "PKG",
+    "exchange": "NYSE",
+    "name": "Packaging Corporation of America",
+    "sector": "Materials",
+    "subIndustry": "Paper & Plastic Packaging Products & Materials",
+    "hqCity": "Lake Forest",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "PLTR",
+    "exchange": "NASDAQ",
+    "name": "Palantir Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Aventura",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "PANW",
+    "exchange": "NASDAQ",
+    "name": "Palo Alto Networks",
+    "sector": "Information Technology",
+    "subIndustry": "Systems Software",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "PSKY",
+    "exchange": "NASDAQ",
+    "name": "Paramount Skydance Corporation",
+    "sector": "Communication Services",
+    "subIndustry": "Movies & Entertainment",
+    "hqCity": "Los Angeles",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "PH",
+    "exchange": "NYSE",
+    "name": "Parker Hannifin",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Cleveland",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "PAYX",
+    "exchange": "NASDAQ",
+    "name": "Paychex",
+    "sector": "Industrials",
+    "subIndustry": "Human Resource & Employment Services",
+    "hqCity": "Penfield",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "PYPL",
+    "exchange": "NASDAQ",
+    "name": "PayPal",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "PNR",
+    "exchange": "NYSE",
+    "name": "Pentair",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Worsley",
+    "hqRegion": "United Kingdom"
+  },
+  {
+    "ticker": "PEP",
+    "exchange": "NASDAQ",
+    "name": "PepsiCo",
+    "sector": "Consumer Staples",
+    "subIndustry": "Soft Drinks & Non-alcoholic Beverages",
+    "hqCity": "Purchase",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "PFE",
+    "exchange": "NYSE",
+    "name": "Pfizer",
+    "sector": "Health Care",
+    "subIndustry": "Pharmaceuticals",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "PCG",
+    "exchange": "NYSE",
+    "name": "PG&E Corporation",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Oakland",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "PM",
+    "exchange": "NYSE",
+    "name": "Philip Morris International",
+    "sector": "Consumer Staples",
+    "subIndustry": "Tobacco",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "PSX",
+    "exchange": "NYSE",
+    "name": "Phillips 66",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Refining & Marketing",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "PNW",
+    "exchange": "NYSE",
+    "name": "Pinnacle West Capital",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Phoenix",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "PNC",
+    "exchange": "NYSE",
+    "name": "PNC Financial Services",
+    "sector": "Financials",
+    "subIndustry": "Diversified Banks",
+    "hqCity": "Pittsburgh",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "PPG",
+    "exchange": "NYSE",
+    "name": "PPG Industries",
+    "sector": "Materials",
+    "subIndustry": "Specialty Chemicals",
+    "hqCity": "Pittsburgh",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "PPL",
+    "exchange": "NYSE",
+    "name": "PPL Corporation",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Allentown",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "PFG",
+    "exchange": "NASDAQ",
+    "name": "Principal Financial Group",
+    "sector": "Financials",
+    "subIndustry": "Life & Health Insurance",
+    "hqCity": "Des Moines",
+    "hqRegion": "Iowa"
+  },
+  {
+    "ticker": "PG",
+    "exchange": "NYSE",
+    "name": "Procter & Gamble",
+    "sector": "Consumer Staples",
+    "subIndustry": "Personal Care Products",
+    "hqCity": "Cincinnati",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "PGR",
+    "exchange": "NYSE",
+    "name": "Progressive Corporation",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "Mayfield Village",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "PLD",
+    "exchange": "NYSE",
+    "name": "Prologis",
+    "sector": "Real Estate",
+    "subIndustry": "Industrial REITs",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "PRU",
+    "exchange": "NYSE",
+    "name": "Prudential Financial",
+    "sector": "Financials",
+    "subIndustry": "Life & Health Insurance",
+    "hqCity": "Newark",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "PEG",
+    "exchange": "NYSE",
+    "name": "Public Service Enterprise Group",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Newark",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "PTC",
+    "exchange": "NASDAQ",
+    "name": "PTC Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Boston",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "PSA",
+    "exchange": "NYSE",
+    "name": "Public Storage",
+    "sector": "Real Estate",
+    "subIndustry": "Self-Storage REITs",
+    "hqCity": "Glendale",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "PHM",
+    "exchange": "NYSE",
+    "name": "PulteGroup",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Homebuilding",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "PWR",
+    "exchange": "NYSE",
+    "name": "Quanta Services",
+    "sector": "Industrials",
+    "subIndustry": "Construction & Engineering",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "QCOM",
+    "exchange": "NASDAQ",
+    "name": "Qualcomm",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "San Diego",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "DGX",
+    "exchange": "NYSE",
+    "name": "Quest Diagnostics",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Services",
+    "hqCity": "Secaucus",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "Q",
+    "exchange": "NYSE",
+    "name": "Qnity Electronics",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductor Materials & Equipment",
+    "hqCity": "Wilmington",
+    "hqRegion": "Delaware"
+  },
+  {
+    "ticker": "RL",
+    "exchange": "NYSE",
+    "name": "Ralph Lauren Corporation",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Apparel, Accessories & Luxury Goods",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "RJF",
+    "exchange": "NYSE",
+    "name": "Raymond James Financial",
+    "sector": "Financials",
+    "subIndustry": "Investment Banking & Brokerage",
+    "hqCity": "St. Petersburg",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "RTX",
+    "exchange": "NYSE",
+    "name": "RTX Corporation",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Waltham",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "O",
+    "exchange": "NYSE",
+    "name": "Realty Income",
+    "sector": "Real Estate",
+    "subIndustry": "Retail REITs",
+    "hqCity": "San Diego",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "REG",
+    "exchange": "NASDAQ",
+    "name": "Regency Centers",
+    "sector": "Real Estate",
+    "subIndustry": "Retail REITs",
+    "hqCity": "Jacksonville",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "REGN",
+    "exchange": "NASDAQ",
+    "name": "Regeneron Pharmaceuticals",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "Tarrytown",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "RF",
+    "exchange": "NYSE",
+    "name": "Regions Financial Corporation",
+    "sector": "Financials",
+    "subIndustry": "Regional Banks",
+    "hqCity": "Birmingham",
+    "hqRegion": "Alabama"
+  },
+  {
+    "ticker": "RSG",
+    "exchange": "NYSE",
+    "name": "Republic Services",
+    "sector": "Industrials",
+    "subIndustry": "Environmental & Facilities Services",
+    "hqCity": "Phoenix",
+    "hqRegion": "Arizona"
+  },
+  {
+    "ticker": "RMD",
+    "exchange": "NYSE",
+    "name": "ResMed",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "San Diego",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "RVTY",
+    "exchange": "NYSE",
+    "name": "Revvity",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Waltham",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "HOOD",
+    "exchange": "NASDAQ",
+    "name": "Robinhood Markets",
+    "sector": "Financials",
+    "subIndustry": "Investment Banking & Brokerage",
+    "hqCity": "Menlo Park",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "ROK",
+    "exchange": "NYSE",
+    "name": "Rockwell Automation",
+    "sector": "Industrials",
+    "subIndustry": "Electrical Components & Equipment",
+    "hqCity": "Milwaukee",
+    "hqRegion": "Wisconsin"
+  },
+  {
+    "ticker": "ROL",
+    "exchange": "NYSE",
+    "name": "Rollins, Inc.",
+    "sector": "Industrials",
+    "subIndustry": "Environmental & Facilities Services",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "ROP",
+    "exchange": "NASDAQ",
+    "name": "Roper Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Equipment & Instruments",
+    "hqCity": "Sarasota",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "ROST",
+    "exchange": "NASDAQ",
+    "name": "Ross Stores",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Apparel Retail",
+    "hqCity": "Dublin",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "RCL",
+    "exchange": "NYSE",
+    "name": "Royal Caribbean Group",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Hotels, Resorts & Cruise Lines",
+    "hqCity": "Miami",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "SPGI",
+    "exchange": "NYSE",
+    "name": "S&P Global",
+    "sector": "Financials",
+    "subIndustry": "Financial Exchanges & Data",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "CRM",
+    "exchange": "NYSE",
+    "name": "Salesforce",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "SNDK",
+    "exchange": "NASDAQ",
+    "name": "Sandisk",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "Milpitas",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "SBAC",
+    "exchange": "NASDAQ",
+    "name": "SBA Communications",
+    "sector": "Real Estate",
+    "subIndustry": "Telecom Tower REITs",
+    "hqCity": "Boca Raton",
+    "hqRegion": "Florida"
+  },
+  {
+    "ticker": "SLB",
+    "exchange": "NYSE",
+    "name": "Schlumberger",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Equipment & Services",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "STX",
+    "exchange": "NASDAQ",
+    "name": "Seagate Technology",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "SRE",
+    "exchange": "NYSE",
+    "name": "Sempra",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "San Diego",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "NOW",
+    "exchange": "NYSE",
+    "name": "ServiceNow",
+    "sector": "Information Technology",
+    "subIndustry": "Systems Software",
+    "hqCity": "Santa Clara",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "SHW",
+    "exchange": "NYSE",
+    "name": "Sherwin-Williams",
+    "sector": "Materials",
+    "subIndustry": "Specialty Chemicals",
+    "hqCity": "Cleveland",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "SPG",
+    "exchange": "NYSE",
+    "name": "Simon Property Group",
+    "sector": "Real Estate",
+    "subIndustry": "Retail REITs",
+    "hqCity": "Indianapolis",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "SWKS",
+    "exchange": "NASDAQ",
+    "name": "Skyworks Solutions",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Irvine",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "SJM",
+    "exchange": "NYSE",
+    "name": "J.M. Smucker Company (The)",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Orrville",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "SW",
+    "exchange": "NYSE",
+    "name": "Smurfit Westrock",
+    "sector": "Materials",
+    "subIndustry": "Paper & Plastic Packaging Products & Materials",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "SNA",
+    "exchange": "NYSE",
+    "name": "Snap-on",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Kenosha",
+    "hqRegion": "Wisconsin"
+  },
+  {
+    "ticker": "SOLV",
+    "exchange": "NYSE",
+    "name": "Solventum",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Technology",
+    "hqCity": "Saint Paul",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "SO",
+    "exchange": "NYSE",
+    "name": "Southern Company",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Atlanta",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "LUV",
+    "exchange": "NYSE",
+    "name": "Southwest Airlines",
+    "sector": "Industrials",
+    "subIndustry": "Passenger Airlines",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "SWK",
+    "exchange": "NYSE",
+    "name": "Stanley Black & Decker",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "New Britain",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "SBUX",
+    "exchange": "NASDAQ",
+    "name": "Starbucks",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Restaurants",
+    "hqCity": "Seattle",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "STT",
+    "exchange": "NYSE",
+    "name": "State Street Corporation",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "Boston",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "STLD",
+    "exchange": "NASDAQ",
+    "name": "Steel Dynamics",
+    "sector": "Materials",
+    "subIndustry": "Steel",
+    "hqCity": "Fort Wayne",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "STE",
+    "exchange": "NYSE",
+    "name": "Steris",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "SYK",
+    "exchange": "NYSE",
+    "name": "Stryker Corporation",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Kalamazoo",
+    "hqRegion": "Michigan"
+  },
+  {
+    "ticker": "SMCI",
+    "exchange": "NASDAQ",
+    "name": "Supermicro",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "SYF",
+    "exchange": "NYSE",
+    "name": "Synchrony Financial",
+    "sector": "Financials",
+    "subIndustry": "Consumer Finance",
+    "hqCity": "Stamford",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "SNPS",
+    "exchange": "NASDAQ",
+    "name": "Synopsys",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Sunnyvale",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "SYY",
+    "exchange": "NYSE",
+    "name": "Sysco",
+    "sector": "Consumer Staples",
+    "subIndustry": "Food Distributors",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "TMUS",
+    "exchange": "NASDAQ",
+    "name": "T-Mobile US",
+    "sector": "Communication Services",
+    "subIndustry": "Wireless Telecommunication Services",
+    "hqCity": "Bellevue",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "TROW",
+    "exchange": "NASDAQ",
+    "name": "T. Rowe Price",
+    "sector": "Financials",
+    "subIndustry": "Asset Management & Custody Banks",
+    "hqCity": "Baltimore",
+    "hqRegion": "Maryland"
+  },
+  {
+    "ticker": "TTWO",
+    "exchange": "NASDAQ",
+    "name": "Take-Two Interactive",
+    "sector": "Communication Services",
+    "subIndustry": "Interactive Home Entertainment",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "TPR",
+    "exchange": "NYSE",
+    "name": "Tapestry, Inc.",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Apparel, Accessories & Luxury Goods",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "TRGP",
+    "exchange": "NYSE",
+    "name": "Targa Resources",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Storage & Transportation",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "TGT",
+    "exchange": "NYSE",
+    "name": "Target Corporation",
+    "sector": "Consumer Staples",
+    "subIndustry": "Consumer Staples Merchandise Retail",
+    "hqCity": "Minneapolis",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "TEL",
+    "exchange": "NYSE",
+    "name": "TE Connectivity",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Manufacturing Services",
+    "hqCity": "Galway",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "TDY",
+    "exchange": "NYSE",
+    "name": "Teledyne Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Equipment & Instruments",
+    "hqCity": "Thousand Oaks",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "TER",
+    "exchange": "NASDAQ",
+    "name": "Teradyne",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductor Materials & Equipment",
+    "hqCity": "North Reading",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "TSLA",
+    "exchange": "NASDAQ",
+    "name": "Tesla, Inc.",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Automobile Manufacturers",
+    "hqCity": "Austin",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "TXN",
+    "exchange": "NASDAQ",
+    "name": "Texas Instruments",
+    "sector": "Information Technology",
+    "subIndustry": "Semiconductors",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "TPL",
+    "exchange": "NYSE",
+    "name": "Texas Pacific Land Corporation",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Exploration & Production",
+    "hqCity": "Dallas",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "TXT",
+    "exchange": "NYSE",
+    "name": "Textron",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Providence",
+    "hqRegion": "Rhode Island"
+  },
+  {
+    "ticker": "TMO",
+    "exchange": "NYSE",
+    "name": "Thermo Fisher Scientific",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Waltham",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "TJX",
+    "exchange": "NYSE",
+    "name": "TJX Companies",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Apparel Retail",
+    "hqCity": "Framingham",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "TKO",
+    "exchange": "NYSE",
+    "name": "TKO Group Holdings",
+    "sector": "Communication Services",
+    "subIndustry": "Movies & Entertainment",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "TTD",
+    "exchange": "NASDAQ",
+    "name": "Trade Desk (The)",
+    "sector": "Communication Services",
+    "subIndustry": "Advertising",
+    "hqCity": "Ventura",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "TSCO",
+    "exchange": "NASDAQ",
+    "name": "Tractor Supply",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Other Specialty Retail",
+    "hqCity": "Brentwood",
+    "hqRegion": "Tennessee"
+  },
+  {
+    "ticker": "TT",
+    "exchange": "NYSE",
+    "name": "Trane Technologies",
+    "sector": "Industrials",
+    "subIndustry": "Building Products",
+    "hqCity": "Dublin",
+    "hqRegion": "Ireland"
+  },
+  {
+    "ticker": "TDG",
+    "exchange": "NYSE",
+    "name": "TransDigm Group",
+    "sector": "Industrials",
+    "subIndustry": "Aerospace & Defense",
+    "hqCity": "Cleveland",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "TRV",
+    "exchange": "NYSE",
+    "name": "Travelers Companies (The)",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "TRMB",
+    "exchange": "NASDAQ",
+    "name": "Trimble Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Westminster",
+    "hqRegion": "Colorado"
+  },
+  {
+    "ticker": "TFC",
+    "exchange": "NYSE",
+    "name": "Truist Financial",
+    "sector": "Financials",
+    "subIndustry": "Diversified Banks",
+    "hqCity": "Charlotte",
+    "hqRegion": "North Carolina"
+  },
+  {
+    "ticker": "TYL",
+    "exchange": "NYSE",
+    "name": "Tyler Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Plano",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "TSN",
+    "exchange": "NYSE",
+    "name": "Tyson Foods",
+    "sector": "Consumer Staples",
+    "subIndustry": "Packaged Foods & Meats",
+    "hqCity": "Springdale",
+    "hqRegion": "Arkansas"
+  },
+  {
+    "ticker": "USB",
+    "exchange": "NYSE",
+    "name": "U.S. Bancorp",
+    "sector": "Financials",
+    "subIndustry": "Diversified Banks",
+    "hqCity": "Minneapolis",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "UBER",
+    "exchange": "NYSE",
+    "name": "Uber",
+    "sector": "Industrials",
+    "subIndustry": "Passenger Ground Transportation",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "UDR",
+    "exchange": "NYSE",
+    "name": "UDR, Inc.",
+    "sector": "Real Estate",
+    "subIndustry": "Multi-Family Residential REITs",
+    "hqCity": "Highlands Ranch",
+    "hqRegion": "Colorado"
+  },
+  {
+    "ticker": "ULTA",
+    "exchange": "NASDAQ",
+    "name": "Ulta Beauty",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Other Specialty Retail",
+    "hqCity": "Bolingbrook",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "UNP",
+    "exchange": "NYSE",
+    "name": "Union Pacific Corporation",
+    "sector": "Industrials",
+    "subIndustry": "Rail Transportation",
+    "hqCity": "Omaha",
+    "hqRegion": "Nebraska"
+  },
+  {
+    "ticker": "UAL",
+    "exchange": "NASDAQ",
+    "name": "United Airlines Holdings",
+    "sector": "Industrials",
+    "subIndustry": "Passenger Airlines",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "UPS",
+    "exchange": "NYSE",
+    "name": "United Parcel Service",
+    "sector": "Industrials",
+    "subIndustry": "Air Freight & Logistics",
+    "hqCity": "Sandy Springs",
+    "hqRegion": "Georgia"
+  },
+  {
+    "ticker": "URI",
+    "exchange": "NYSE",
+    "name": "United Rentals",
+    "sector": "Industrials",
+    "subIndustry": "Trading Companies & Distributors",
+    "hqCity": "Stamford",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "UNH",
+    "exchange": "NYSE",
+    "name": "UnitedHealth Group",
+    "sector": "Health Care",
+    "subIndustry": "Managed Health Care",
+    "hqCity": "Eden Prairie",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "UHS",
+    "exchange": "NYSE",
+    "name": "Universal Health Services",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Facilities",
+    "hqCity": "King of Prussia",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "VLO",
+    "exchange": "NYSE",
+    "name": "Valero Energy",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Refining & Marketing",
+    "hqCity": "San Antonio",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "VEEV",
+    "exchange": "NYSE",
+    "name": "Veeva Systems",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Technology",
+    "hqCity": "Pleasanton",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "VTR",
+    "exchange": "NYSE",
+    "name": "Ventas",
+    "sector": "Real Estate",
+    "subIndustry": "Health Care REITs",
+    "hqCity": "Chicago",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "VLTO",
+    "exchange": "NYSE",
+    "name": "Veralto",
+    "sector": "Industrials",
+    "subIndustry": "Environmental & Facilities Services",
+    "hqCity": "Waltham",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "VRSN",
+    "exchange": "NASDAQ",
+    "name": "Verisign",
+    "sector": "Information Technology",
+    "subIndustry": "Internet Services & Infrastructure",
+    "hqCity": "Reston",
+    "hqRegion": "Virginia"
+  },
+  {
+    "ticker": "VRSK",
+    "exchange": "NASDAQ",
+    "name": "Verisk Analytics",
+    "sector": "Industrials",
+    "subIndustry": "Research & Consulting Services",
+    "hqCity": "Jersey City",
+    "hqRegion": "New Jersey"
+  },
+  {
+    "ticker": "VZ",
+    "exchange": "NYSE",
+    "name": "Verizon",
+    "sector": "Communication Services",
+    "subIndustry": "Integrated Telecommunication Services",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "VRTX",
+    "exchange": "NASDAQ",
+    "name": "Vertex Pharmaceuticals",
+    "sector": "Health Care",
+    "subIndustry": "Biotechnology",
+    "hqCity": "Boston",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "VRT",
+    "exchange": "NYSE",
+    "name": "Vertiv",
+    "sector": "Industrials",
+    "subIndustry": "Electrical Components & Equipment",
+    "hqCity": "Westerville",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "VTRS",
+    "exchange": "NASDAQ",
+    "name": "Viatris",
+    "sector": "Health Care",
+    "subIndustry": "Pharmaceuticals",
+    "hqCity": "Pittsburgh",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "VICI",
+    "exchange": "NYSE",
+    "name": "Vici Properties",
+    "sector": "Real Estate",
+    "subIndustry": "Hotel & Resort REITs",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "V",
+    "exchange": "NYSE",
+    "name": "Visa Inc.",
+    "sector": "Financials",
+    "subIndustry": "Transaction & Payment Processing Services",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "VST",
+    "exchange": "NYSE",
+    "name": "Vistra Corp.",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Irving",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "VMC",
+    "exchange": "NYSE",
+    "name": "Vulcan Materials Company",
+    "sector": "Materials",
+    "subIndustry": "Construction Materials",
+    "hqCity": "Birmingham",
+    "hqRegion": "Alabama"
+  },
+  {
+    "ticker": "WRB",
+    "exchange": "NYSE",
+    "name": "W. R. Berkley Corporation",
+    "sector": "Financials",
+    "subIndustry": "Property & Casualty Insurance",
+    "hqCity": "Greenwich",
+    "hqRegion": "Connecticut"
+  },
+  {
+    "ticker": "GWW",
+    "exchange": "NYSE",
+    "name": "W. W. Grainger",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "Lake Forest",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "WAB",
+    "exchange": "NYSE",
+    "name": "Wabtec",
+    "sector": "Industrials",
+    "subIndustry": "Construction Machinery & Heavy Transportation Equipment",
+    "hqCity": "Pittsburgh",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "WMT",
+    "exchange": "NASDAQ",
+    "name": "Walmart",
+    "sector": "Consumer Staples",
+    "subIndustry": "Consumer Staples Merchandise Retail",
+    "hqCity": "Bentonville",
+    "hqRegion": "Arkansas"
+  },
+  {
+    "ticker": "DIS",
+    "exchange": "NYSE",
+    "name": "Walt Disney Company (The)",
+    "sector": "Communication Services",
+    "subIndustry": "Movies & Entertainment",
+    "hqCity": "Burbank",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "WBD",
+    "exchange": "NASDAQ",
+    "name": "Warner Bros. Discovery",
+    "sector": "Communication Services",
+    "subIndustry": "Broadcasting",
+    "hqCity": "New York City",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "WM",
+    "exchange": "NYSE",
+    "name": "Waste Management",
+    "sector": "Industrials",
+    "subIndustry": "Environmental & Facilities Services",
+    "hqCity": "Houston",
+    "hqRegion": "Texas"
+  },
+  {
+    "ticker": "WAT",
+    "exchange": "NYSE",
+    "name": "Waters Corporation",
+    "sector": "Health Care",
+    "subIndustry": "Life Sciences Tools & Services",
+    "hqCity": "Milford",
+    "hqRegion": "Massachusetts"
+  },
+  {
+    "ticker": "WEC",
+    "exchange": "NYSE",
+    "name": "WEC Energy Group",
+    "sector": "Utilities",
+    "subIndustry": "Electric Utilities",
+    "hqCity": "Milwaukee",
+    "hqRegion": "Wisconsin"
+  },
+  {
+    "ticker": "WFC",
+    "exchange": "NYSE",
+    "name": "Wells Fargo",
+    "sector": "Financials",
+    "subIndustry": "Diversified Banks",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "WELL",
+    "exchange": "NYSE",
+    "name": "Welltower",
+    "sector": "Real Estate",
+    "subIndustry": "Health Care REITs",
+    "hqCity": "Toledo",
+    "hqRegion": "Ohio"
+  },
+  {
+    "ticker": "WST",
+    "exchange": "NYSE",
+    "name": "West Pharmaceutical Services",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Supplies",
+    "hqCity": "Exton",
+    "hqRegion": "Pennsylvania"
+  },
+  {
+    "ticker": "WDC",
+    "exchange": "NASDAQ",
+    "name": "Western Digital",
+    "sector": "Information Technology",
+    "subIndustry": "Technology Hardware, Storage & Peripherals",
+    "hqCity": "San Jose",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "WY",
+    "exchange": "NYSE",
+    "name": "Weyerhaeuser",
+    "sector": "Real Estate",
+    "subIndustry": "Timber REITs",
+    "hqCity": "Seattle",
+    "hqRegion": "Washington"
+  },
+  {
+    "ticker": "WSM",
+    "exchange": "NYSE",
+    "name": "Williams-Sonoma, Inc.",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Homefurnishing Retail",
+    "hqCity": "San Francisco",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "WMB",
+    "exchange": "NYSE",
+    "name": "Williams Companies",
+    "sector": "Energy",
+    "subIndustry": "Oil & Gas Storage & Transportation",
+    "hqCity": "Tulsa",
+    "hqRegion": "Oklahoma"
+  },
+  {
+    "ticker": "WTW",
+    "exchange": "NASDAQ",
+    "name": "Willis Towers Watson",
+    "sector": "Financials",
+    "subIndustry": "Insurance Brokers",
+    "hqCity": "London",
+    "hqRegion": "United Kingdom"
+  },
+  {
+    "ticker": "WDAY",
+    "exchange": "NASDAQ",
+    "name": "Workday, Inc.",
+    "sector": "Information Technology",
+    "subIndustry": "Application Software",
+    "hqCity": "Pleasanton",
+    "hqRegion": "California"
+  },
+  {
+    "ticker": "WYNN",
+    "exchange": "NASDAQ",
+    "name": "Wynn Resorts",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Casinos & Gaming",
+    "hqCity": "Paradise",
+    "hqRegion": "Nevada"
+  },
+  {
+    "ticker": "XEL",
+    "exchange": "NASDAQ",
+    "name": "Xcel Energy",
+    "sector": "Utilities",
+    "subIndustry": "Multi-Utilities",
+    "hqCity": "Minneapolis",
+    "hqRegion": "Minnesota"
+  },
+  {
+    "ticker": "XYL",
+    "exchange": "NYSE",
+    "name": "Xylem Inc.",
+    "sector": "Industrials",
+    "subIndustry": "Industrial Machinery & Supplies & Components",
+    "hqCity": "White Plains",
+    "hqRegion": "New York"
+  },
+  {
+    "ticker": "YUM",
+    "exchange": "NYSE",
+    "name": "Yum! Brands",
+    "sector": "Consumer Discretionary",
+    "subIndustry": "Restaurants",
+    "hqCity": "Louisville",
+    "hqRegion": "Kentucky"
+  },
+  {
+    "ticker": "ZBRA",
+    "exchange": "NASDAQ",
+    "name": "Zebra Technologies",
+    "sector": "Information Technology",
+    "subIndustry": "Electronic Equipment & Instruments",
+    "hqCity": "Lincolnshire",
+    "hqRegion": "Illinois"
+  },
+  {
+    "ticker": "ZBH",
+    "exchange": "NYSE",
+    "name": "Zimmer Biomet",
+    "sector": "Health Care",
+    "subIndustry": "Health Care Equipment",
+    "hqCity": "Warsaw",
+    "hqRegion": "Indiana"
+  },
+  {
+    "ticker": "ZTS",
+    "exchange": "NYSE",
+    "name": "Zoetis",
+    "sector": "Health Care",
+    "subIndustry": "Pharmaceuticals",
+    "hqCity": "Parsippany",
+    "hqRegion": "New Jersey"
+  }
+]

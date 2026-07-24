@@ -1,13 +1,21 @@
 import "dotenv/config";
 import { db } from "../src/lib/db";
 import { resolveCikByTicker } from "../src/lib/edgar";
+import { REGION_CENTROIDS, FALLBACK_CENTROID } from "./data/regions";
+import sp500 from "./data/sp500.json";
 
-// Deterministic small offset so companies sharing an exchange don't stack on
-// exactly the same globe coordinate.
-function jitter(seed: string, spread = 1.2): number {
-  let hash = 0;
-  for (let i = 0; i < seed.length; i++) hash = (hash * 31 + seed.charCodeAt(i)) | 0;
-  return ((hash % 1000) / 1000) * spread - spread / 2;
+const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5)); // ~137.5°, even point spacing
+
+// Sunflower-spiral offset so companies sharing a region/exchange fan out into a
+// visible cluster instead of stacking on one coordinate — a tight stack of 30+
+// points is unclickable once the globe is rotating. maxRadiusDeg scales with
+// group size so a region with 1 company barely moves and one with 70 spreads wide.
+function spiralOffset(index: number, total: number, centerLat: number, maxRadiusDeg: number) {
+  const angle = index * GOLDEN_ANGLE;
+  const radius = maxRadiusDeg * Math.sqrt((index + 0.5) / total);
+  const dLat = radius * Math.sin(angle);
+  const dLng = (radius * Math.cos(angle)) / Math.cos((centerLat * Math.PI) / 180);
+  return { dLat, dLng };
 }
 
 const EXCHANGES = [
@@ -52,42 +60,15 @@ const NSE_COMPANIES = [
   { ticker: "SCAN", name: "WPP Scangroup", sector: "Marketing & Advertising" },
 ];
 
-const NASDAQ_COMPANIES = [
-  { ticker: "AAPL", name: "Apple Inc.", sector: "Technology" },
-  { ticker: "MSFT", name: "Microsoft Corporation", sector: "Technology" },
-  { ticker: "AMZN", name: "Amazon.com, Inc.", sector: "Consumer Discretionary" },
-  { ticker: "GOOGL", name: "Alphabet Inc.", sector: "Communication Services" },
-  { ticker: "META", name: "Meta Platforms, Inc.", sector: "Communication Services" },
-  { ticker: "NVDA", name: "NVIDIA Corporation", sector: "Technology" },
-  { ticker: "TSLA", name: "Tesla, Inc.", sector: "Consumer Discretionary" },
-  { ticker: "NFLX", name: "Netflix, Inc.", sector: "Communication Services" },
-  { ticker: "ADBE", name: "Adobe Inc.", sector: "Technology" },
-  { ticker: "CSCO", name: "Cisco Systems, Inc.", sector: "Technology" },
-  { ticker: "INTC", name: "Intel Corporation", sector: "Technology" },
-  { ticker: "PEP", name: "PepsiCo, Inc.", sector: "Consumer Staples" },
-  { ticker: "COST", name: "Costco Wholesale Corporation", sector: "Consumer Staples" },
-];
-
-const NYSE_COMPANIES = [
-  { ticker: "BRK-B", name: "Berkshire Hathaway Inc.", sector: "Financials" },
-  { ticker: "JPM", name: "JPMorgan Chase & Co.", sector: "Financials" },
-  { ticker: "V", name: "Visa Inc.", sector: "Financials" },
-  { ticker: "JNJ", name: "Johnson & Johnson", sector: "Healthcare" },
-  { ticker: "WMT", name: "Walmart Inc.", sector: "Consumer Staples" },
-  { ticker: "PG", name: "Procter & Gamble Company", sector: "Consumer Staples" },
-  { ticker: "MA", name: "Mastercard Incorporated", sector: "Financials" },
-  { ticker: "HD", name: "Home Depot, Inc.", sector: "Consumer Discretionary" },
-  { ticker: "KO", name: "Coca-Cola Company", sector: "Consumer Staples" },
-  { ticker: "XOM", name: "Exxon Mobil Corporation", sector: "Energy" },
-  { ticker: "CVX", name: "Chevron Corporation", sector: "Energy" },
-  { ticker: "CRM", name: "Salesforce, Inc.", sector: "Technology" },
-  { ticker: "PFE", name: "Pfizer Inc.", sector: "Healthcare" },
-  { ticker: "MCD", name: "McDonald's Corporation", sector: "Consumer Discretionary" },
-  { ticker: "NKE", name: "Nike, Inc.", sector: "Consumer Discretionary" },
-  { ticker: "DIS", name: "Walt Disney Company", sector: "Communication Services" },
-  { ticker: "BA", name: "Boeing Company", sector: "Industrials" },
-  { ticker: "IBM", name: "International Business Machines Corporation", sector: "Technology" },
-];
+interface Sp500Row {
+  ticker: string;
+  exchange: "NASDAQ" | "NYSE";
+  name: string;
+  sector: string;
+  subIndustry: string;
+  hqCity: string;
+  hqRegion: string;
+}
 
 async function main() {
   const exchanges = new Map<string, string>();
@@ -100,47 +81,66 @@ async function main() {
     exchanges.set(ex.code, row.id);
   }
 
-  for (const c of NSE_COMPANIES) {
-    const exchangeId = exchanges.get("NSE")!;
-    const exchange = EXCHANGES.find((e) => e.code === "NSE")!;
-    await db.company.upsert({
-      where: { exchangeId_ticker: { exchangeId, ticker: c.ticker } },
-      update: { name: c.name, sector: c.sector },
-      create: {
-        ...c,
-        exchangeId,
-        lat: exchange.lat + jitter(c.ticker),
-        lng: exchange.lng + jitter(c.ticker + "lng"),
-      },
-    });
+  // NSE Kenya — no free API, uploaded manually — spiral around Nairobi.
+  const nseExchangeId = exchanges.get("NSE")!;
+  const nseCenter = EXCHANGES.find((e) => e.code === "NSE")!;
+  await Promise.all(
+    NSE_COMPANIES.map((c, i) => {
+      const { dLat, dLng } = spiralOffset(i, NSE_COMPANIES.length, nseCenter.lat, 4);
+      return db.company.upsert({
+        where: { exchangeId_ticker: { exchangeId: nseExchangeId, ticker: c.ticker } },
+        update: { name: c.name, sector: c.sector },
+        create: {
+          ...c,
+          exchangeId: nseExchangeId,
+          lat: nseCenter.lat + dLat,
+          lng: nseCenter.lng + dLng,
+        },
+      });
+    })
+  );
+
+  // S&P 500 — group by HQ region so each state/country cluster spirals
+  // around its own real centroid instead of every company sharing one point.
+  const rows = sp500 as Sp500Row[];
+  const byRegion = new Map<string, Sp500Row[]>();
+  for (const row of rows) {
+    const list = byRegion.get(row.hqRegion) ?? [];
+    list.push(row);
+    byRegion.set(row.hqRegion, list);
   }
 
-  for (const [code, list] of [
-    ["NASDAQ", NASDAQ_COMPANIES],
-    ["NYSE", NYSE_COMPANIES],
-  ] as const) {
-    const exchangeId = exchanges.get(code)!;
-    const exchange = EXCHANGES.find((e) => e.code === code)!;
-    for (const c of list) {
-      console.log(`Resolving CIK for ${c.ticker}...`);
-      // SEC's mapping uses the hyphenated class-share form as-is (e.g. "BRK-B"),
-      // not dot notation — no reformatting needed.
-      const cik = await resolveCikByTicker(c.ticker);
+  let resolved = 0;
+  for (const [region, companies] of byRegion) {
+    const center = REGION_CENTROIDS[region] ?? FALLBACK_CENTROID;
+    const maxRadius = Math.min(2.5 + Math.sqrt(companies.length) * 1.1, 9);
+
+    for (let i = 0; i < companies.length; i++) {
+      const c = companies[i];
+      const exchangeId = exchanges.get(c.exchange)!;
+      const { dLat, dLng } = spiralOffset(i, companies.length, center.lat, maxRadius);
+
+      const cik = await resolveCikByTicker(c.ticker.replace(".", "-"));
+      resolved++;
+      if (resolved % 50 === 0) console.log(`Resolved ${resolved}/${rows.length} CIKs...`);
+
       await db.company.upsert({
         where: { exchangeId_ticker: { exchangeId, ticker: c.ticker } },
         update: { name: c.name, sector: c.sector, cik },
         create: {
-          ...c,
+          ticker: c.ticker,
+          name: c.name,
+          sector: c.sector,
           cik,
           exchangeId,
-          lat: exchange.lat + jitter(c.ticker),
-          lng: exchange.lng + jitter(c.ticker + "lng"),
+          lat: center.lat + dLat,
+          lng: center.lng + dLng,
         },
       });
     }
   }
 
-  console.log("Seed complete.");
+  console.log(`Seed complete: ${NSE_COMPANIES.length} NSE + ${rows.length} S&P 500 companies.`);
 }
 
 main()
