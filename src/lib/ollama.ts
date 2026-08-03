@@ -178,11 +178,16 @@ export async function narrateMetrics(
     ? `\nAll monetary figures are in ${currency}. Refer to that currency by name where it reads naturally.`
     : "";
 
+  // Small models reliably mis-scale these: a 3b test turned NVIDIA's
+  // 60922000000 into "$60,922 billion". Spelling out the magnitudes costs a few
+  // tokens and removes the whole class of error.
+  const scaleNote = `\nFigures are absolute amounts, not thousands or millions: 60922000000 is 60.9 billion, 1500000 is 1.5 million. Restate them at the correct magnitude.`;
+
   return chatJson<Pick<ReportMetrics, "summary" | "highlights">>(NARRATE_SCHEMA, [
     { role: "system", content: SYSTEM_PROMPT },
     {
       role: "user",
-      content: `Company: ${companyName}\nFiscal year: ${fiscalYear}${currencyNote}\n\nKnown figures (JSON, original currency, null = not disclosed):\n${JSON.stringify(metrics)}`,
+      content: `Company: ${companyName}\nFiscal year: ${fiscalYear}${currencyNote}${scaleNote}\n\nKnown figures (JSON, original currency, null = not disclosed):\n${JSON.stringify(metrics)}`,
     },
   ]);
 }
