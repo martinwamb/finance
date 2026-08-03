@@ -10,13 +10,27 @@ datasource db {
   provider = "postgresql"
 }
 
+enum Region {
+  AMERICAS
+  EMEA
+  APAC
+}
+
 model Exchange {
-  id        String    @id @default(cuid())
-  code      String    @unique
-  name      String
-  country   String
-  lat       Float
-  lng       Float
+  id       String @id @default(cuid())
+  code     String @unique
+  name     String
+  country  String
+  region   Region @default(AMERICAS)
+  timezone String @default("UTC")
+  // Yahoo Finance ticker suffix for this venue (".DE", ".T", ".HK"). Null for
+  // US venues, whose tickers carry no suffix, and for NSE Kenya, which Yahoo
+  // does not cover at all (those companies come in via PDF upload).
+  yahooSuffix String?
+
+  lat Float
+  lng Float
+
   companies Company[]
   createdAt DateTime  @default(now())
 }
@@ -27,6 +41,10 @@ model Company {
   name       String
   sector     String?
   cik        String? // SEC EDGAR CIK, null for non-EDGAR companies
+  // Fully-qualified Yahoo Finance symbol ("SAP.DE", "7203.T"). Usually
+  // ticker + exchange.yahooSuffix, but stored explicitly because a few listings
+  // don't follow that rule (e.g. HK tickers are zero-padded to four digits).
+  yahooSymbol String?
   lat        Float?
   lng        Float?
   logoUrl    String?
@@ -43,6 +61,7 @@ model Company {
 
 enum ReportSource {
   EDGAR
+  YAHOO
   UPLOAD
 }
 
@@ -71,14 +90,24 @@ model Report {
   sourceUrl  String?
   filePath   String?
   rawText    String?
+  // ISO 4217 code the figures in this report are denominated in. Read from the
+  // source per filing, never inferred from the exchange — Shell files in USD
+  // despite its London listing, and comparing a JPY revenue against a USD one
+  // without this is silently wrong.
+  currency   String?
   status     ReportStatus  @default(PENDING)
   failReason String?
+  // Analysis bookkeeping. The worker retries FAILED reports up to a cap rather
+  // than stranding them, so a transient Ollama outage isn't permanent.
+  attempts      Int       @default(0)
+  lastAttemptAt DateTime?
   insight    Insight?
   createdAt  DateTime      @default(now())
   updatedAt  DateTime      @updatedAt
 
   @@unique([companyId, fiscalYear, period])
   @@index([status])
+  @@index([status, attempts])
 }
 
 model Insight {

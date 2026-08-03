@@ -39,6 +39,7 @@ async function main() {
           source: "EDGAR",
           sourceUrl: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=${company.cik}&type=10-K`,
           rawText: JSON.stringify(metrics),
+          currency: metrics.currency,
           status: "PENDING",
         },
       });

@@ -7,15 +7,18 @@ import { formatCompact, formatNumber } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
 
-export default async function CompanyPage({
-  params,
-}: {
-  params: Promise<{ ticker: string }>;
-}) {
-  const { ticker } = await params;
+// Scoped by exchange because tickers are only unique per venue
+// (Company has @@unique([exchangeId, ticker])) — "SAN" is Sanofi in Paris and
+// Banco Santander in Madrid, and a bare ticker lookup would return whichever
+// row the database happened to hand back first.
+export default async function CompanyPage(props: PageProps<"/company/[exchange]/[ticker]">) {
+  const { exchange, ticker } = await props.params;
 
   const company = await db.company.findFirst({
-    where: { ticker: { equals: ticker, mode: "insensitive" } },
+    where: {
+      ticker: { equals: ticker, mode: "insensitive" },
+      exchange: { code: { equals: exchange, mode: "insensitive" } },
+    },
     include: {
       exchange: true,
       reports: {
@@ -39,7 +42,11 @@ export default async function CompanyPage({
       profitMarginPct: r.insight?.profitMarginPct?.toNumber() ?? null,
     }));
 
-  const latestInsight = company.reports[0]?.insight;
+  const latestReport = company.reports[0];
+  const latestInsight = latestReport?.insight;
+  // A company reports in one currency, so the newest report's currency labels
+  // the whole series.
+  const currency = latestReport?.currency ?? "USD";
 
   return (
     <div className="mx-auto w-full max-w-5xl px-6 py-12">
@@ -56,7 +63,9 @@ export default async function CompanyPage({
           <div className="flex gap-6 text-right text-sm">
             <div>
               <p className="text-muted-foreground">Revenue</p>
-              <p className="font-medium">{formatCompact(latestInsight.revenue?.toNumber())}</p>
+              <p className="font-medium">
+                {formatCompact(latestInsight.revenue?.toNumber(), currency)}
+              </p>
             </div>
             <div>
               <p className="text-muted-foreground">EPS</p>
@@ -71,7 +80,7 @@ export default async function CompanyPage({
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-sm font-medium text-muted-foreground">
-                FY{company.reports[0].fiscalYear} summary
+                FY{latestReport.fiscalYear} summary
               </CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
@@ -89,7 +98,7 @@ export default async function CompanyPage({
             </CardContent>
           </Card>
 
-          {chartData.length > 0 && <CompanyCharts data={chartData} />}
+          {chartData.length > 0 && <CompanyCharts data={chartData} currency={currency} />}
         </>
       ) : (
         <Card>

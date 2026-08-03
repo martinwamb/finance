@@ -41,14 +41,34 @@ module.exports = {
       time: true,
     },
     {
-      // Tue/Fri 03:15 UTC — clear of learn (23:15/01:15/02:15/04:30/05:05),
-      // local-dialect (00:15/00:45/05:15), and port/publisher-site
-      // (02:00/02:30/03:30).
+      // Weekly, right after the EDGAR job. Non-US venues (Europe + Asia) come
+      // from Yahoo's fundamentals endpoint; like EDGAR this only queues PENDING
+      // reports, no Ollama call, so it can run outside the off-peak window.
+      name: "finance-ingest-yahoo",
+      script: "node_modules/.bin/tsx",
+      args: "scripts/ingest-yahoo.ts",
+      cwd: "/home/admin/apps/finance",
+      cron_restart: "30 20 * * 1",
+      autorestart: false,
+      watch: false,
+      env: { NODE_ENV: "production" },
+      out_file: "/home/admin/logs/finance-ingest-yahoo.log",
+      error_file: "/home/admin/logs/finance-ingest-yahoo.log",
+      merge_logs: true,
+      time: true,
+    },
+    {
+      // Nightly at 22:15 UTC, as the Ollama window opens. The script works to a
+      // wall-clock deadline (05:30 UTC) rather than a fixed report count, so it
+      // uses whatever window is available and stops cleanly before Ollama is
+      // shut down at 06:00. 22:15 is clear of learn
+      // (23:15/01:15/02:15/04:30/05:05), local-dialect (00:15/00:45/05:15), and
+      // port/publisher-site (02:00/02:30/03:30).
       name: "finance-analyze",
       script: "node_modules/.bin/tsx",
       args: "scripts/analyze-reports.ts",
       cwd: "/home/admin/apps/finance",
-      cron_restart: "15 3 * * 2,5",
+      cron_restart: "15 22 * * *",
       autorestart: false,
       watch: false,
       env: { NODE_ENV: "production" },

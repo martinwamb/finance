@@ -111,7 +111,10 @@ export function FinanceGlobe({ points }: { points: GlobePoint[] }) {
           pointsMerge={false}
           pointLabel={() => ""}
           onPointHover={(point) => setHovered(point as GlobePoint | null)}
-          onPointClick={(point) => router.push(`/company/${(point as GlobePoint).ticker}`)}
+          onPointClick={(point) => {
+            const p = point as GlobePoint;
+            router.push(`/company/${p.exchangeCode}/${p.ticker}`);
+          }}
           enablePointerInteraction
         />
       )}

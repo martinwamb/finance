@@ -69,7 +69,10 @@ export default async function Home() {
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {latest.map((report) => (
-              <Link key={report.id} href={`/company/${report.company.ticker}`}>
+              <Link
+                key={report.id}
+                href={`/company/${report.company.exchange.code}/${report.company.ticker}`}
+              >
                 <Card className="h-full transition-colors hover:border-foreground/30">
                   <CardHeader>
                     <div className="flex items-center justify-between">
@@ -85,7 +88,7 @@ export default async function Home() {
                       <span>
                         Revenue{" "}
                         <span className="font-medium text-foreground">
-                          {formatCompact(report.insight?.revenue?.toNumber())}
+                          {formatCompact(report.insight?.revenue?.toNumber(), report.currency ?? "USD")}
                         </span>
                       </span>
                       <span>

@@ -2,6 +2,7 @@ import "dotenv/config";
 import { db } from "../src/lib/db";
 import { resolveCikByTicker } from "../src/lib/edgar";
 import { REGION_CENTROIDS, FALLBACK_CENTROID } from "./data/regions";
+import { INTERNATIONAL_EXCHANGES } from "./data/international";
 import sp500 from "./data/sp500.json";
 
 const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5)); // ~137.5°, even point spacing
@@ -19,9 +20,9 @@ function spiralOffset(index: number, total: number, centerLat: number, maxRadius
 }
 
 const EXCHANGES = [
-  { code: "NSE", name: "Nairobi Securities Exchange", country: "Kenya", lat: -1.2921, lng: 36.8219 },
-  { code: "NASDAQ", name: "Nasdaq", country: "United States", lat: 40.7561, lng: -73.9868 },
-  { code: "NYSE", name: "New York Stock Exchange", country: "United States", lat: 40.7069, lng: -74.0113 },
+  { code: "NSE", name: "Nairobi Securities Exchange", country: "Kenya", region: "EMEA" as const, timezone: "Africa/Nairobi", yahooSuffix: null, lat: -1.2921, lng: 36.8219 },
+  { code: "NASDAQ", name: "Nasdaq", country: "United States", region: "AMERICAS" as const, timezone: "America/New_York", yahooSuffix: null, lat: 40.7561, lng: -73.9868 },
+  { code: "NYSE", name: "New York Stock Exchange", country: "United States", region: "AMERICAS" as const, timezone: "America/New_York", yahooSuffix: null, lat: 40.7069, lng: -74.0113 },
 ];
 
 const NSE_COMPANIES = [
@@ -75,7 +76,17 @@ async function main() {
   for (const ex of EXCHANGES) {
     const row = await db.exchange.upsert({
       where: { code: ex.code },
-      update: { name: ex.name, country: ex.country, lat: ex.lat, lng: ex.lng },
+      // These three already exist in production, so the update branch is the
+      // one that actually runs — it must carry the new columns too.
+      update: {
+        name: ex.name,
+        country: ex.country,
+        region: ex.region,
+        timezone: ex.timezone,
+        yahooSuffix: ex.yahooSuffix,
+        lat: ex.lat,
+        lng: ex.lng,
+      },
       create: ex,
     });
     exchanges.set(ex.code, row.id);
@@ -140,7 +151,60 @@ async function main() {
     }
   }
 
-  console.log(`Seed complete: ${NSE_COMPANIES.length} NSE + ${rows.length} S&P 500 companies.`);
+  // European and Asian venues. No per-company HQ data for these, so each list
+  // spirals around its own exchange (same treatment as NSE Kenya above).
+  let international = 0;
+  for (const ex of INTERNATIONAL_EXCHANGES) {
+    const row = await db.exchange.upsert({
+      where: { code: ex.code },
+      update: {
+        name: ex.name,
+        country: ex.country,
+        region: ex.region,
+        timezone: ex.timezone,
+        yahooSuffix: ex.yahooSuffix,
+        lat: ex.lat,
+        lng: ex.lng,
+      },
+      create: {
+        code: ex.code,
+        name: ex.name,
+        country: ex.country,
+        region: ex.region,
+        timezone: ex.timezone,
+        yahooSuffix: ex.yahooSuffix,
+        lat: ex.lat,
+        lng: ex.lng,
+      },
+    });
+
+    const maxRadius = Math.min(2.5 + Math.sqrt(ex.companies.length) * 1.1, 9);
+
+    for (let i = 0; i < ex.companies.length; i++) {
+      const c = ex.companies[i];
+      const yahooSymbol = c.yahooSymbol ?? `${c.ticker}${ex.yahooSuffix}`;
+      const { dLat, dLng } = spiralOffset(i, ex.companies.length, ex.lat, maxRadius);
+
+      await db.company.upsert({
+        where: { exchangeId_ticker: { exchangeId: row.id, ticker: c.ticker } },
+        update: { name: c.name, sector: c.sector, yahooSymbol },
+        create: {
+          ticker: c.ticker,
+          name: c.name,
+          sector: c.sector,
+          yahooSymbol,
+          exchangeId: row.id,
+          lat: ex.lat + dLat,
+          lng: ex.lng + dLng,
+        },
+      });
+      international++;
+    }
+  }
+
+  console.log(
+    `Seed complete: ${NSE_COMPANIES.length} NSE + ${rows.length} S&P 500 + ${international} international companies across ${EXCHANGES.length + INTERNATIONAL_EXCHANGES.length} exchanges.`
+  );
 }
 
 main()

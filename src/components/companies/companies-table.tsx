@@ -52,7 +52,10 @@ export function CompaniesTable({ rows }: { rows: CompanyRow[] }) {
             {filtered.map((r) => (
               <TableRow key={`${r.exchangeCode}-${r.ticker}`} className="hover:bg-muted/40">
                 <TableCell>
-                  <Link href={`/company/${r.ticker}`} className="font-medium hover:underline">
+                  <Link
+                    href={`/company/${r.exchangeCode}/${r.ticker}`}
+                    className="font-medium hover:underline"
+                  >
                     {r.name}
                   </Link>
                 </TableCell>

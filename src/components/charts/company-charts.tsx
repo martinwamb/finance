@@ -66,10 +66,19 @@ function ChartTooltip({
   );
 }
 
-export function CompanyCharts({ data }: { data: FiscalPoint[] }) {
+export function CompanyCharts({
+  data,
+  currency = "USD",
+}: {
+  data: FiscalPoint[];
+  currency?: string;
+}) {
   const mode = useMode();
   const blue = mode === "dark" ? "#3987e5" : "#2a78d6";
   const sorted = [...data].sort((a, b) => a.fiscalYear - b.fiscalYear);
+  // Axis and tooltip money labels follow the company's own reporting currency,
+  // so a JPY filer isn't rendered with a dollar sign.
+  const money = (v: number) => formatCompact(v, currency);
 
   return (
     <div className="grid gap-4 sm:grid-cols-2">
@@ -92,11 +101,11 @@ export function CompanyCharts({ data }: { data: FiscalPoint[] }) {
                 axisLine={false}
                 width={56}
                 tick={{ fill: CHROME.muted[mode], fontSize: 12 }}
-                tickFormatter={(v) => formatCompact(v)}
+                tickFormatter={money}
               />
               <Tooltip
                 cursor={{ fill: CHROME.gridline[mode], opacity: 0.4 }}
-                content={<ChartTooltip formatter={(v) => formatCompact(v)} mode={mode} />}
+                content={<ChartTooltip formatter={money} mode={mode} />}
               />
               <Bar dataKey="revenue" fill={blue} radius={[4, 4, 0, 0]} maxBarSize={40} />
             </BarChart>
@@ -123,11 +132,11 @@ export function CompanyCharts({ data }: { data: FiscalPoint[] }) {
                 axisLine={false}
                 width={56}
                 tick={{ fill: CHROME.muted[mode], fontSize: 12 }}
-                tickFormatter={(v) => formatCompact(v)}
+                tickFormatter={money}
               />
               <Tooltip
                 cursor={{ fill: CHROME.gridline[mode], opacity: 0.4 }}
-                content={<ChartTooltip formatter={(v) => formatCompact(v)} mode={mode} />}
+                content={<ChartTooltip formatter={money} mode={mode} />}
               />
               <Bar dataKey="netIncome" radius={[4, 4, 0, 0]} maxBarSize={40}>
                 {sorted.map((d, i) => (

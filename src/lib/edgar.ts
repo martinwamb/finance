@@ -1,6 +1,11 @@
 // SEC EDGAR is free and requires no API key, but does require a descriptive
 // User-Agent identifying the app per SEC's fair-access policy:
 // https://www.sec.gov/os/webmaster-faq#developers
+//
+// Covers US filers only. Everything else comes from src/lib/yahoo.ts behind the
+// shared provider interface in src/lib/fundamentals.ts.
+
+import { deriveMetrics, type FiscalYearMetrics } from "./fundamentals";
 
 const USER_AGENT =
   process.env.EDGAR_USER_AGENT ?? "Finance Insights (finance@wambugumartin.com)";
@@ -80,36 +85,24 @@ function latestAnnualValue(
   return null;
 }
 
-export interface EdgarFiscalYearMetrics {
-  fiscalYear: number;
-  revenue: number | null;
-  netIncome: number | null;
-  totalAssets: number | null;
-  totalLiabilities: number | null;
-  eps: number | null;
-  revenueGrowthPct: number | null;
-  profitMarginPct: number | null;
-}
-
+// We only ever read the USD unit out of companyfacts, so EDGAR figures are USD
+// by construction.
 export function extractFiscalYearMetrics(
   facts: CompanyFacts,
   fiscalYear: number
-): EdgarFiscalYearMetrics {
-  const revenue = latestAnnualValue(facts, TAGS.revenue, fiscalYear);
-  const priorRevenue = latestAnnualValue(facts, TAGS.revenue, fiscalYear - 1);
-  const netIncome = latestAnnualValue(facts, TAGS.netIncome, fiscalYear);
-
-  return {
+): FiscalYearMetrics {
+  return deriveMetrics(
     fiscalYear,
-    revenue,
-    netIncome,
-    totalAssets: latestAnnualValue(facts, TAGS.totalAssets, fiscalYear),
-    totalLiabilities: latestAnnualValue(facts, TAGS.totalLiabilities, fiscalYear),
-    eps: latestAnnualValue(facts, TAGS.eps, fiscalYear),
-    revenueGrowthPct:
-      revenue != null && priorRevenue ? ((revenue - priorRevenue) / priorRevenue) * 100 : null,
-    profitMarginPct: revenue && netIncome != null ? (netIncome / revenue) * 100 : null,
-  };
+    {
+      revenue: latestAnnualValue(facts, TAGS.revenue, fiscalYear),
+      priorRevenue: latestAnnualValue(facts, TAGS.revenue, fiscalYear - 1),
+      netIncome: latestAnnualValue(facts, TAGS.netIncome, fiscalYear),
+      totalAssets: latestAnnualValue(facts, TAGS.totalAssets, fiscalYear),
+      totalLiabilities: latestAnnualValue(facts, TAGS.totalLiabilities, fiscalYear),
+      eps: latestAnnualValue(facts, TAGS.eps, fiscalYear),
+    },
+    "USD"
+  );
 }
 
 export function latestAvailableFiscalYear(facts: CompanyFacts): number | null {

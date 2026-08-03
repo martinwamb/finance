@@ -2,9 +2,36 @@
 // scheduled 22:00-06:00 UTC off-peak window (no GPU on the server) — callers of
 // this module must only run from within that window (see scripts/analyze-reports.ts,
 // which is invoked exclusively by a PM2 cron job scheduled inside it).
+//
+// Every request streams (`stream: true`). This is not about consuming tokens
+// incrementally — we buffer the whole thing anyway — it is the only way to keep
+// the request alive. With `stream: false` Ollama withholds the response headers
+// until generation is completely finished, and Node's undici applies a 300s
+// `headersTimeout` to that wait; on this CPU-only box a 14b model routinely
+// takes longer than that, so every single call died with `TypeError: fetch
+// failed` at exactly 5m00s. Streaming makes the headers arrive with the first
+// token, so the only limit left is the explicit budget below.
 
 const OLLAMA_URL = process.env.OLLAMA_URL ?? "http://127.0.0.1:11434";
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL ?? "qwen3:14b";
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL ?? "qwen2.5:14b";
+
+// Wall-clock ceiling for a single generation. Generous by design: it is a
+// backstop against a wedged model, not a latency target.
+const OLLAMA_TIMEOUT_MS = Number(process.env.OLLAMA_TIMEOUT_MS ?? 20 * 60_000);
+
+export class OllamaTimeoutError extends Error {
+  constructor(ms: number) {
+    super(`Ollama did not finish within ${Math.round(ms / 1000)}s`);
+    this.name = "OllamaTimeoutError";
+  }
+}
+
+export class OllamaRequestError extends Error {
+  constructor(status: number, body: string) {
+    super(`Ollama request failed: ${status} ${body}`);
+    this.name = "OllamaRequestError";
+  }
+}
 
 export interface ReportMetrics {
   revenue: number | null;
@@ -40,6 +67,79 @@ Figures are in the report's original currency and units, expressed as plain numb
 separators, no currency symbols). If a figure is not present in the text, use null. Keep "summary"
 to 2-3 sentences, no jargon. "highlights" is 3-5 short bullet strings, each one concrete fact.`;
 
+interface ChatMessage {
+  role: "system" | "user";
+  content: string;
+}
+
+interface StreamChunk {
+  message?: { content?: string };
+  done?: boolean;
+  error?: string;
+}
+
+// Posts a chat completion constrained to `format`, streams the reply back, and
+// parses the accumulated content as JSON. Shared by both public helpers below —
+// they differ only in schema and prompt.
+async function chatJson<T>(format: object, messages: ChatMessage[]): Promise<T> {
+  let res: Response;
+  try {
+    res = await fetch(`${OLLAMA_URL}/api/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ model: OLLAMA_MODEL, stream: true, format, messages }),
+      signal: AbortSignal.timeout(OLLAMA_TIMEOUT_MS),
+    });
+  } catch (err) {
+    if (err instanceof Error && (err.name === "TimeoutError" || err.name === "AbortError")) {
+      throw new OllamaTimeoutError(OLLAMA_TIMEOUT_MS);
+    }
+    throw err;
+  }
+
+  if (!res.ok) throw new OllamaRequestError(res.status, await res.text());
+  if (!res.body) throw new OllamaRequestError(res.status, "empty response body");
+
+  // Ollama streams newline-delimited JSON. Chunk boundaries do not respect line
+  // boundaries, so hold the trailing partial line over to the next read.
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  let content = "";
+
+  try {
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop() ?? "";
+
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        const chunk = JSON.parse(line) as StreamChunk;
+        if (chunk.error) throw new OllamaRequestError(200, chunk.error);
+        content += chunk.message?.content ?? "";
+      }
+    }
+  } catch (err) {
+    if (err instanceof Error && (err.name === "TimeoutError" || err.name === "AbortError")) {
+      throw new OllamaTimeoutError(OLLAMA_TIMEOUT_MS);
+    }
+    throw err;
+  } finally {
+    reader.releaseLock();
+  }
+
+  if (buffer.trim()) {
+    const chunk = JSON.parse(buffer) as StreamChunk;
+    content += chunk.message?.content ?? "";
+  }
+
+  return JSON.parse(content) as T;
+}
+
 export async function analyzeReportText(
   companyName: string,
   fiscalYear: number,
@@ -47,30 +147,13 @@ export async function analyzeReportText(
 ): Promise<ReportMetrics> {
   const truncated = reportText.slice(0, 24000);
 
-  const res = await fetch(`${OLLAMA_URL}/api/chat`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model: OLLAMA_MODEL,
-      stream: false,
-      format: METRICS_SCHEMA,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        {
-          role: "user",
-          content: `Company: ${companyName}\nFiscal year: ${fiscalYear}\n\nReport excerpt:\n${truncated}`,
-        },
-      ],
-    }),
-  });
-
-  if (!res.ok) {
-    throw new Error(`Ollama request failed: ${res.status} ${await res.text()}`);
-  }
-
-  const data = (await res.json()) as { message: { content: string } };
-  const parsed = JSON.parse(data.message.content) as ReportMetrics;
-  return parsed;
+  return chatJson<ReportMetrics>(METRICS_SCHEMA, [
+    { role: "system", content: SYSTEM_PROMPT },
+    {
+      role: "user",
+      content: `Company: ${companyName}\nFiscal year: ${fiscalYear}\n\nReport excerpt:\n${truncated}`,
+    },
+  ]);
 }
 
 const NARRATE_SCHEMA = {
@@ -82,37 +165,26 @@ const NARRATE_SCHEMA = {
   required: ["summary", "highlights"],
 } as const;
 
-// For EDGAR filings the numbers come straight from XBRL (accurate, no LLM
-// needed) — this call only asks the model to turn already-known figures into
-// plain language, which is a much smaller/faster prompt than full extraction.
+// For filings ingested from a structured source (SEC XBRL, Yahoo fundamentals)
+// the numbers are already exact — this call only asks the model to turn known
+// figures into plain language, a much smaller/faster prompt than full extraction.
 export async function narrateMetrics(
   companyName: string,
   fiscalYear: number,
-  metrics: Record<string, number | null>
+  metrics: Record<string, number | null>,
+  currency?: string | null
 ): Promise<Pick<ReportMetrics, "summary" | "highlights">> {
-  const res = await fetch(`${OLLAMA_URL}/api/chat`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model: OLLAMA_MODEL,
-      stream: false,
-      format: NARRATE_SCHEMA,
-      messages: [
-        { role: "system", content: SYSTEM_PROMPT },
-        {
-          role: "user",
-          content: `Company: ${companyName}\nFiscal year: ${fiscalYear}\n\nKnown figures (JSON, original currency, null = not disclosed):\n${JSON.stringify(metrics)}`,
-        },
-      ],
-    }),
-  });
+  const currencyNote = currency
+    ? `\nAll monetary figures are in ${currency}. Refer to that currency by name where it reads naturally.`
+    : "";
 
-  if (!res.ok) {
-    throw new Error(`Ollama request failed: ${res.status} ${await res.text()}`);
-  }
-
-  const data = (await res.json()) as { message: { content: string } };
-  return JSON.parse(data.message.content);
+  return chatJson<Pick<ReportMetrics, "summary" | "highlights">>(NARRATE_SCHEMA, [
+    { role: "system", content: SYSTEM_PROMPT },
+    {
+      role: "user",
+      content: `Company: ${companyName}\nFiscal year: ${fiscalYear}${currencyNote}\n\nKnown figures (JSON, original currency, null = not disclosed):\n${JSON.stringify(metrics)}`,
+    },
+  ]);
 }
 
 export async function isOllamaReachable(): Promise<boolean> {
